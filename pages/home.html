@@ -7,16 +7,16 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,7 +34,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="../../index.html" class="logo">
+    <a href="index.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>PA</b></span>
       <!-- logo for regular state and mobile devices -->
@@ -87,11 +87,10 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Stan Lee</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <p id="userName"></p>
         </div>
       </div>
       <!-- search form -->
@@ -106,45 +105,7 @@
       </form>
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MAIN NAVIGATION</li>
-        <li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Home</span></a></li>
-        <li><a href="#"><i class="fa fa-briefcase"></i> <span>Permintaan</span></a></li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-share"></i> <span>Multilevel</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-            <li class="treeview">
-              <a href="#"><i class="fa fa-circle-o"></i> Level One
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
-                <li class="treeview">
-                  <a href="#"><i class="fa fa-circle-o"></i> Level Two
-                    <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                  </a>
-                  <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-          </ul>
-        </li>
-        <li class="header">LABELS</li>
-        <li><a href="#"><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>
+      <ul id="menuList" class="sidebar-menu" data-widget="tree">
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -205,20 +166,59 @@
 <!-- ./wrapper -->
 
 <!-- jQuery 3 -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- SlimScroll -->
-<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
-<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<script src="../bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
+<script src="../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+<script src="../dist/js/demo.js"></script>
+
+<!-- CUSTOM -->
 <script>
   $(document).ready(function () {
     $('.sidebar-menu').tree()
+
+    var user = localStorage.getItem("user")
+    if (user == null){
+      location.href = "login.html";
+    }
+    else {
+      var user = JSON.parse(user)
+      var menu = ""
+      menu += `<li class="header">MAIN NAVIGATION</li>`
+
+      $("#userName").html(user.name)
+
+      
+      if(user.role == 'pengadaan'){
+        menu +=`<li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Pengadaan</span></a></li>`
+      }
+      else if(user.role == 'admin'){
+        menu +=`<li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+                <li><a href="#"><i class="fa fa-briefcase"></i> <span>Master Aset</span></a></li>
+                <li><a href="#"><i class="fa fa-briefcase"></i> <span>Daftar Aset</span></a></li>
+                <li><a href="#"><i class="fa fa-briefcase"></i> <span>Maintenance Aset</span></a></li>`
+      }
+      else if(user.role == 'helpdesk'){
+        menu +=`<li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Permintaan</span></a></li>
+                <li><a href="#"><i class="fa fa-briefcase"></i> <span>Vendor</span></a></li>`
+      }
+      else if(user.role == 'admin'){
+        menu +=`<li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Permintaan</span></a></li>`
+      }
+      else if(user.role == 'admin'){
+        menu +=`<li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Permintaan</span></a></li>`
+      }
+
+      menu += `<li class="header">LABELS</li><li><a href="#"><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>`
+
+      $("#menuList").html(menu)
+    }
   })
 </script>
 </body>
