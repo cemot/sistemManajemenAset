@@ -140,7 +140,7 @@
           </div>
         </div>
         <div class="box-body">
-          Start creating your amazing application!
+          <iframe id="mainContent" style="border:0" src=""></iframe>
         </div>
         <!-- /.box-body -->
         <div class="box-footer">
@@ -193,16 +193,16 @@
       menu += `<li class="header">MAIN NAVIGATION</li>`
 
       $("#userName").html(user.name)
-
       
+      //data-menu="{URL PAGE}"
       if(user.role == 'pengadaan'){
         menu +=`<li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Pengadaan</span></a></li>`
       }
       else if(user.role == 'admin'){
-        menu +=`<li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
-                <li><a href="#"><i class="fa fa-briefcase"></i> <span>Master Aset</span></a></li>
-                <li><a href="#"><i class="fa fa-briefcase"></i> <span>Daftar Aset</span></a></li>
-                <li><a href="#"><i class="fa fa-briefcase"></i> <span>Maintenance Aset</span></a></li>`
+        menu +=`<li data-menu="./pengadaan/index.html" class="active"><a><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+                <li data-menu="./pengadaan/request.html"><a ><i class="fa fa-briefcase"></i> <span>Master Aset</span></a></li>
+                <li><a><i class="fa fa-briefcase"></i> <span>Daftar Aset</span></a></li>
+                <li><a><i class="fa fa-briefcase"></i> <span>Maintenance Aset</span></a></li>`
       }
       else if(user.role == 'helpdesk'){
         menu +=`<li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Permintaan</span></a></li>
@@ -219,6 +219,13 @@
 
       $("#menuList").html(menu)
     }
+    
+    $(".sidebar-menu li").click(function () {
+      $("#mainContent").attr("src", $(this).data("menu"))
+      $(".sidebar-menu li").removeClass("active")
+      $(this).addClass("active")
+    })
+
   })
 </script>
 </body>
