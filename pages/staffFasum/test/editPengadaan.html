@@ -1,0 +1,182 @@
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+ <section class="content-header">
+      <h1>Edit Pengadaan</h1>
+      <ol class="breadcrumb">
+        <li><a href="pengadaan.html"><i class="fa fa-briefcase"></i> Pengadaan</a></li>
+        <li><i class="fa fa-edit"></i> Edit Pengadaan</li>
+      </ol>
+ </section>
+ <section class="content">
+ <!-- Default box -->
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Edit Pengadaan Aset</h3>
+
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                    title="Collapse">
+              <i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+              <i class="fa fa-times"></i></button>
+          </div>
+        </div>
+        <div class="box-body">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Kode Pengadaan</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="PE001" disabled>
+                  </div>
+                </div><br><br>
+                  <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
+                  <div class="col-sm-10">
+                    <select class="form-control">
+                      <option>Sedang Diproses</option>
+                      <option>Selesai</option>
+                      <option>Ditolak</option>
+                    </select>
+                  </div>
+                </div>
+        </div>
+        
+        <div class="box-footer">
+            
+        </div>
+        <!-- /.box-footer-->
+      </div>      
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Aset yang Dipesan</h3>
+
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                    title="Collapse">
+              <i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+              <i class="fa fa-times"></i></button>
+          </div>
+        </div>
+        <div class="box-body">
+        <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Pilih Vendor</label>
+
+                  <div class="col-sm-10">
+                    <select class="form-control">
+                      <option>Vendor 1</option>
+                      <option>Vendor 2</option>
+                      <option>Vendor 3</option>
+                  </select>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Pilih Aset</label>
+
+                  <div class="col-sm-10">
+                    <select class="form-control">
+                      <option>P001 - Laptop</option>
+                      <option>P002 - Komputer</option>
+                      <option>P003 - Router</option>
+                  </select>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Jumlah</label>
+
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" id="jumlah" placeholder="Jumlah Aset Dipesan" >
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Harga</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="harga" placeholder="Harga Aset (e.g : 5000000)" >
+                  </div>
+                </div><br><br> 
+                <a href="pengadaan.html"><button type="submit" class="btn btn-danger pull-left">Hapus Pengadaan</button></a>
+                <a href=""><button type="submit" class="btn btn-primary pull-right">Tambah Barang</button></a>
+                </div>
+        <div class="box-footer">
+          <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Nomor</th>
+                  <th>Jenis</th>
+                  <th>Jumlah</th>
+                  <th>Harga</th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Laptop</td>
+                  <td>5</td>
+                  <td>Rp. 5.000.000</td>
+                  <td><a href="">Delete</a></td>
+                </tr>
+                 <tr>
+                  <td>2</td>
+                  <td>Komputer</td>
+                  <td>3</td>
+                  <td>Rp. 7.000.000</td>
+                  <td><a href="">Delete</a></td>
+                </tr>
+                 <tr>
+                  <td>3</td>
+                  <td>Router</td>
+                  <td>2</td>
+                  <td>Rp. 2.000.000</td>
+                  <td><a href="">Delete</a></td>
+                </tr>
+                <tr>
+                  <td colspan="3"><b>Total Harga</b></td>
+                  <td colspan="2">Rp. 14.000.000</td>
+                </tr>
+                </tbody>
+              </table>
+
+          <a href="pengadaan.html"><button type="submit" class="btn btn-success pull-right">Selesai</button></a>
+        </div>
+      </div>
+  </section>
+
+  <!-- jQuery 3 -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
+<!-- FastClick -->
+<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<script>
+
+//table
+    $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>

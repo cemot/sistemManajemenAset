@@ -1,0 +1,426 @@
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+ <section class="content-header">
+      <h1>Meminta Pengadaan Aset</h1>
+      <ol class="breadcrumb">
+        <li><i class="fa fa-briefcase"></i> Meminta Pengadaaan Aset</li>
+      </ol>
+ </section>
+ <section class="content">
+ <div class="row">
+        <div class="col-xs-12">
+          <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#pengadaan" data-toggle="tab">Meminta Pengadaan</a></li>
+              <li><a href="#diproses" data-toggle="tab">Diproses</a></li>
+              <li><a href="#selesai" data-toggle="tab">Selesai</a></li>
+              <li><a href="#ditolak" data-toggle="tab">Ditolak</a></li>
+            </ul>
+            <div class="tab-content">
+              <!-- Font Awesome Icons -->
+              <div class="tab-pane active" id="pengadaan">
+                <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Kode</th>
+                  <th>Jenis</th>
+                  <th>Jumlah</th>
+                  <th>Prioritas</th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>P001</td>
+                  <td>Laptop</td>
+                  <td>15</td>
+                  <td>Penting</td>
+                  <td><a href="#" data-toggle="modal" data-target="#modal-edit">Edit</a></td>
+                </tr>
+                 <tr>
+                  <td>P002</td>
+                  <td>printer</td>
+                  <td>10</td>
+                  <td>Penting</td>
+                  <td><a href="#" data-toggle="modal" data-target="#modal-edit">Edit</a></td>
+                </tr>
+                 <tr>
+                  <td>P003</td>
+                  <td>Router</td>
+                  <td>7</td>
+                  <td>Penting</td>
+                  <td><a href="#" data-toggle="modal" data-target="#modal-edit">Edit</a></td>
+                </tr>
+                </tbody>
+         </table>
+              </div>
+              <div class="tab-pane" id="diproses">
+                <table id="example3" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Kode</th>
+                  <th>Jenis</th>
+                  <th>Jumlah</th>
+                  <th>Prioritas</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>P001</td>
+                  <td>Laptop</td>
+                  <td>15</td>
+                  <td>Penting</td>
+                </tr>
+                 <tr>
+                  <td>P002</td>
+                  <td>printer</td>
+                  <td>10</td>
+                  <td>Penting</td>
+                </tr>
+                 <tr>
+                  <td>P003</td>
+                  <td>Router</td>
+                  <td>7</td>
+                  <td>Penting</td>
+                </tr>
+                </tbody>
+         </table>
+              </div>
+              <div class="tab-pane" id="selesai">
+                <table id="example4" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Kode</th>
+                  <th>Jenis</th>
+                  <th>Jumlah</th>
+                  <th>Prioritas</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>P001</td>
+                  <td>Laptop</td>
+                  <td>15</td>
+                  <td>Penting</td>
+                </tr>
+                 <tr>
+                  <td>P002</td>
+                  <td>printer</td>
+                  <td>10</td>
+                  <td>Penting</td>
+                </tr>
+                 <tr>
+                  <td>P003</td>
+                  <td>Router</td>
+                  <td>7</td>
+                  <td>Penting</td>
+                </tr>
+                </tbody>
+         </table>
+              </div>
+              <div class="tab-pane" id="ditolak">
+                <table id="example5" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Kode</th>
+                  <th>Jenis</th>
+                  <th>Jumlah</th>
+                  <th>Prioritas</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>P001</td>
+                  <td>Laptop</td>
+                  <td>15</td>
+                  <td>Penting</td>
+                </tr>
+                 <tr>
+                  <td>P002</td>
+                  <td>printer</td>
+                  <td>10</td>
+                  <td>Penting</td>
+                </tr>
+                 <tr>
+                  <td>P003</td>
+                  <td>Router</td>
+                  <td>7</td>
+                  <td>Penting</td>
+                </tr>
+                </tbody>
+         </table>
+              </div>
+              <!-- /#ion-icons -->
+
+            </div>
+            <!-- /.tab-content -->
+          </div>
+           <a href="#" data-toggle="modal" data-target="#modal-tambah"><button type="submit" class="btn btn-success pull-right">Tambah Aset</button></a>
+          <!-- /.nav-tabs-custom -->
+        </div>
+        <!-- /.col -->
+      </div>
+              <div class="modal fade" id="modal-edit">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Edit Aset</h4>
+              </div>
+              <div class="modal-body">
+              <div class="box">
+                <div class="box-body">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Kode Aset</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="PE001" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label" >Prioritas</label>
+                  <div class="col-sm-10">
+                    <select class="form-control">
+                      <option>Sedang Diproses</option>
+                      <option>Selesai</option>
+                      <option>Ditolak</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="box-footer">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Pilih Aset</label>
+
+                  <div class="col-sm-10">
+                    <select class="form-control">
+                      <option>P001 - Laptop</option>
+                      <option>P002 - Komputer</option>
+                      <option>P003 - Router</option>
+                  </select>
+                  </div>
+                </div><br><br>
+                  <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Jumlah</label>
+
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" id="jumlah" value="10">
+                  </div>
+                </div><br><br>
+              </div>  
+            </div>
+                <a href="pengadaanAset.html"><button type="submit" class="btn btn-danger pull-left">Hapus Permintaan</button></a>
+                <a href="#"><button type="submit" class="btn btn-primary pull-right">Tambah Barang</button></a><br><br>
+                 <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Nomor</th>
+                  <th>Jenis</th>
+                  <th>Jumlah</th>
+                  <th>Prioritas</th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Laptop</td>
+                  <td>5</td>
+                  <td>Penting</td>
+                  <td><a href="">Delete</a></td>
+                </tr>
+                 <tr>
+                  <td>2</td>
+                  <td>Komputer</td>
+                  <td>3</td>
+                  <td>Penting</td>
+                  <td><a href="">Delete</a></td>
+                </tr>
+                 <tr>
+                  <td>3</td>
+                  <td>Router</td>
+                  <td>2</td>
+                  <td>Penting</td>
+                  <td><a href="">Delete</a></td>
+                </tr>
+                </tbody>
+              </table>
+             </div>
+              <div class="modal-footer">
+                  <a href="pengadaanAset.html"><button type="submit" class="btn btn-success pull-right">Selesai</button></a>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <div class="modal fade" id="modal-tambah">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Tambah Aset</h4>
+              </div>
+              <div class="modal-body">
+              <div class="box">
+                <div class="box-body">
+<div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Kode Aset</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="PE001" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label" >Prioritas</label>
+                  <div class="col-sm-10">
+                    <select class="form-control">
+                      <option>Sedang Diproses</option>
+                      <option>Selesai</option>
+                      <option>Ditolak</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="box-footer">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Pilih Aset</label>
+
+                  <div class="col-sm-10">
+                    <select class="form-control">
+                      <option>P001 - Laptop</option>
+                      <option>P002 - Komputer</option>
+                      <option>P003 - Router</option>
+                  </select>
+                  </div>
+                </div><br><br>
+                  <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Jumlah</label>
+
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" id="jumlah">
+                  </div>
+                </div><br><br>
+              </div>  
+            </div>
+                <a href="#"><button type="submit" class="btn btn-primary pull-right">Tambah Barang</button></a><br><br>
+                 <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Nomor</th>
+                  <th>Jenis</th>
+                  <th>Jumlah</th>
+                  <th>Prioritas</th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Laptop</td>
+                  <td>5</td>
+                  <td>Penting</td>
+                  <td><a href="">Delete</a></td>
+                </tr>
+                 <tr>
+                  <td>2</td>
+                  <td>Komputer</td>
+                  <td>3</td>
+                  <td>Penting</td>
+                  <td><a href="">Delete</a></td>
+                </tr>
+                 <tr>
+                  <td>3</td>
+                  <td>Router</td>
+                  <td>2</td>
+                  <td>Penting</td>
+                  <td><a href="">Delete</a></td>
+                </tr>
+                </tbody>
+              </table>
+             </div>
+              <div class="modal-footer">
+                  <a href=""><button type="submit" class="btn btn-success pull-right">Selesai</button></a>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+  </section>
+
+
+  <!-- jQuery 3 -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
+<!-- FastClick -->
+<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<script>
+  //table
+    $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+  //table
+    $(function () {
+    $('#example3').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+    //table
+    $(function () {
+    $('#example4').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+    //table
+    $(function () {
+    $('#example5').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>
