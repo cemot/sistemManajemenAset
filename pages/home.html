@@ -154,12 +154,12 @@
         $("#mainContent").attr("src", "./staffFasum/index.html")
       }
       else if(user.role == 'admin'){
-        menu +=`<li data-menu="./pengadaan/index.html" class="active"><a><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
-                <li data-menu="./pengadaan/request.html"><a ><i class="fa fa-briefcase"></i> <span>Master Aset</span></a></li>
-                <li><a><i class="fa fa-briefcase"></i> <span>Daftar Aset</span></a></li>
-                <li><a><i class="fa fa-briefcase"></i> <span>Maintenance Aset</span></a></li>`
+        menu +=`<li data-menu="adminAset/index.html" class="active"><a><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+                <li data-menu="adminAset/masterAset.html"><a ><i class="fa fa-briefcase"></i> <span>Master Aset</span></a></li>
+                <li data-menu="adminAset/daftarAset.html"><a><i class="fa fa-briefcase"></i> <span>Daftar Aset</span></a></li>
+                <li data-menu="adminAset"><a><i class="fa fa-briefcase"></i> <span>Maintenance Aset</span></a></li>`
 
-        $("#mainContent").attr("src", "./pengadaan/index.html")
+        $("#mainContent").attr("src", "./adminAset/index.html")
       }
       else if(user.role == 'helpdesk'){
         menu +=`<li data-menu="helpdesk/index.html" class="active"><a><i class="fa fa-home"></i> <span>Laporan</span></a></li>`
