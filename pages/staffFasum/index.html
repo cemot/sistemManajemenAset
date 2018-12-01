@@ -164,14 +164,42 @@
              </div>
              </div>
              <div class="modal-footer">
-              <a href="#"><button type="submit" class="btn btn-danger pull-left">Tolak Permintaan</button></a>
-               <a href="#"><button type="submit" class="btn btn-success pull-right">Terima Permintaan</button></a>
+              <a href="#"><button type="submit" class="btn btn-danger pull-left" data-toggle="modal" data-target="#modal-tolak">Tolak Permintaan</button></a>
+              <button type="submit" class="btn btn-success pull-right" data-toggle="modal" data-target="#modal-terima">Terima Permintaan</button>
              </div>
             </div>
             <!-- /.modal-content -->
           </div>
           <!-- /.modal-dialog -->
         </div>
+        <div class="modal fade" id="modal-terima">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                 <center><h3>Permintaan Berhasil Diterima</h3></center>
+             <div class="modal-footer">
+               <a href="index.html"><button type="submit" class="btn btn-default pull-right">Close</button></a>
+             </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+      </div>
+      <div class="modal fade" id="modal-tolak">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                 <center><h3>Permintaan Berhasil Ditolak</h3></center>
+             <div class="modal-footer">
+               <a href="index.html"><button type="submit" class="btn btn-default pull-right">Close</button></a>
+             </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+      </div>
   </section>
 
  <!-- jQuery 3 -->

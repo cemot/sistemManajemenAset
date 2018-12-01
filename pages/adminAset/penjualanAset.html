@@ -8,16 +8,16 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
  <section class="content-header">
-      <h1>Data Aset</h1>
+      <h1>Transaksi Penjualan Aset</h1>
       <ol class="breadcrumb">
-        <li><i class="fa fa-briefcase"></i> Daftar Aset</li>
+        <li><i class="fa fa-money"></i> Transaksi Penjualan</li>
       </ol>
  </section>
  <section class="content">
  <!-- Default box -->
       <div class="box box-primary">
         <div class="box-header with-border">
-          <h3 class="box-title">Data Aset TI</h3>
+          <h3 class="box-title">Transaksi Penjualan Aset TI</h3>
 
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
@@ -33,7 +33,7 @@
                 <tr>
                   <th>Kode</th>
                   <th>Nama Aset</th>
-                  <th>Lokasi</th>
+                  <th>Jumlah</th>
                   <th>Status</th>
                   <th></th>
                   <th></th>
@@ -53,6 +53,7 @@
         </div>
         <!-- /.box-body -->
         <div class="box-footer">
+            <a href="#" data-toggle="modal" data-target="#modal-tambah"><button type="submit" class="btn btn-success pull-right">Tambah Aset</button></a>
         </div>
         <!-- /.box-footer-->
       </div>
@@ -186,17 +187,77 @@
                   <label for="inputEmail3" class="col-sm-2 control-label" >Lokasi</label>
 
                   <div class="col-sm-10">
-                      <select class="form-control">
-                      <option>Lab Komputer</option>
-                      <option>Kelas 2A</option>
-                      <option>Kelas 3B</option>
-                  </select>
+                    <input type="text" class="form-control" id="Status" value="Lab Komputer">
                   </div>
                 </div><br><br>
               </div>
               <div class="modal-footer">
                   <a href="daftarAset.html"><button type="submit" class="btn btn-success pull-right">Selesai</button></a>
                   <a href="daftarAset.html"><button type="submit" class="btn btn-danger pull-left">Hapus Aset</button></a>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <div class="modal fade" id="modal-tambah">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Tambah Aset</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Kode Aset</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="K001" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Nomer Serial</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="Nomor Serial Aset">
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Nama Aset</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="Nama Aset">
+                  </div>
+                </div><br><br>
+                 <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Jenis Aset</label>
+
+                  <div class="col-sm-10">
+                    <select class="form-control">
+                      <option>P001 - Laptop</option>
+                      <option>P002 - Komputer</option>
+                      <option>P003 - Router</option>
+                  </select>
+                  </div>
+                </div><br><br>
+                  <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Brand</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="Brand Aset">
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Lokasi</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Status" placeholder="Lokasi Aset">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                  <a href="daftarAset.html"><button type="submit" class="btn btn-primary pull-right">Tambah Aset</button></a>
               </div>
             </div>
             <!-- /.modal-content -->
