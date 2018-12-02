@@ -24,8 +24,6 @@
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                     title="Collapse">
               <i class="fa fa-minus"></i></button>
-            <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-              <i class="fa fa-times"></i></button>
           </div>
         </div>
         <div class="box-body">
@@ -43,7 +41,7 @@
                 <tbody>
                 <tr>
                   <td>L001</td>
-                  <td>Komputer Tidak Bisa Menyala</td>
+                  <td>Monitor Tidak Bisa Menyala</td>
                   <td>Penting</td>
                   <td>Belum Terverifikasi</td>
                   <td><a href="#" data-toggle="modal" data-target="#modal-detail">Detail</a></td>
@@ -91,7 +89,9 @@
                   <label for="inputEmail3" class="col-sm-2 control-label" >Bukti Masalah</label>
 
                   <div class="col-sm-10">
-                    <a target="_blank" rel="noopener noreferrer" href="../../dist/img/photo2.png">Bukti Masalah.jpg</a>
+                    <a target="_blank" rel="noopener noreferrer" href="../../dist/img/photo2.png">Bukti Masalah.jpg</a>,&nbsp
+                    <a target="_blank" rel="noopener noreferrer" href="../../dist/img/photo3.png">Bukti Masalah1.jpg</a>,&nbsp
+                    <a target="_blank" rel="noopener noreferrer" href="../../dist/img/photo4.png">Bukti Masalah2.jpg</a>&nbsp
                   </div>
                 </div><br><br>
                 <div class="form-group">
@@ -190,7 +190,7 @@
                   <label for="inputEmail3" class="col-sm-2 control-label">Deskripsi Masalah</label>
 
                   <div class="col-sm-10">
-                   <textarea class="form-control" rows="2" disabled >Komputer tidak bisa menyala</textarea>
+                   <textarea class="form-control" rows="2" disabled >Monitor tidak bisa menyala</textarea>
                   </div>
                 </div><br><br><br>
                 <div class="form-group">
@@ -247,12 +247,12 @@
               </div>
         <div class="box-footer">       
          <div class="col-sm-4 text-center">
-            <a href=""><button type="submit" class="btn btn-danger pull-left">Tolak Laporan</button></a>  
+            <a href="#" data-toggle="modal" data-target="#modal-konfirmasi-no"><button type="submit" class="btn btn-danger pull-left">Tolak Laporan</button></a>  
         </div>
         <div class="col-sm-4 text-center"> 
         </div>
         <div class="col-sm-4 text-center"> 
-            <a href="index.html"><button type="submit" class="btn btn-success pull-right">Selesai</button></a>
+           <a href="#" data-toggle="modal" data-target="#modal-konfirmasi-yes"><button type="submit" class="btn btn-success pull-right">Simpan</button></a>
         </div>
         </div>  
             </div>
@@ -272,12 +272,6 @@
                   <td>Komputer</td>
                   <td>K001 - Komputer</td>
                 </tr>
-                 <tr>
-                  <td>2</td>
-                  <td>Lab Komputer</td>
-                  <td>Komputer</td>
-                  <td>K002 - Komputer</td>
-                </tr>
                 </tbody>
               </table>
              </div>
@@ -286,6 +280,49 @@
           </div>
           <!-- /.modal-dialog -->
         </div>
+    <div id="modal-konfirmasi-no" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+  <div class="modal-content">
+ 
+   <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Konfirmasi</h4>
+   </div>
+ 
+   <div class="modal-body">
+    <b>Apakah Anda Yakin Ingin Menghapus Laporan Ini?</b>
+   </div>
+ 
+   <div class="modal-footer">
+     <a href="index.html"><button type="button" class="btn btn-danger">Ya</button></a>
+     <button type="button" class="btn btn-success" data-dismiss="modal">Tidak</button>
+   </div>
+ 
+  </div>
+ </div>
+</div>
+            <!-- modal konfirmasi-->
+<div id="modal-konfirmasi-yes" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+  <div class="modal-content">
+ 
+   <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Konfirmasi</h4>
+   </div>
+ 
+   <div class="modal-body">
+    <b>Apakah Data yang Diisi Sudah Benar?</b>
+   </div>
+ 
+   <div class="modal-footer">
+     <a href="index.html"><button type="button" class="btn btn-success">Ya</button></a>
+     <button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
+   </div>
+ 
+  </div>
+ </div>
+</div>   
   </section>
 
 
