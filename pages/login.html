@@ -75,8 +75,16 @@
 <!-- iCheck -->
 <script src="../plugins/iCheck/icheck.min.js"></script>
 
-<script src="../data/user.js"></script>
+<script src="../data/data.js"></script>
 <script>
+  function loadAllData() {
+    localStorage.setItem("master_asets", JSON.stringify(data.master_asets));
+    localStorage.setItem("aset_categories", JSON.stringify(data.aset_categories));
+    localStorage.setItem("asets", JSON.stringify(data.asets));
+    localStorage.setItem("locations", JSON.stringify(data.locations));
+    localStorage.setItem("permintaan_aset", JSON.stringify(data.permintaan_aset));
+  }
+
   $(function () {
     $('input').iCheck({
       checkboxClass: 'icheckbox_square-blue',
@@ -92,6 +100,7 @@
         if(username == user.username){
           valid = true;
           localStorage.setItem("user", JSON.stringify(user));
+          loadAllData()
           location.href = "home.html";
         }
       });

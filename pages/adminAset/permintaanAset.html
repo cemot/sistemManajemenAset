@@ -1,0 +1,405 @@
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
+<link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+<link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+<link rel="stylesheet" href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+<section class="content-header">
+    <h1>Data Aset</h1>
+    <ol class="breadcrumb">
+      <li><i class="fa fa-briefcase"></i> Daftar Permintaan</li>
+    </ol>
+</section>
+<section class="content">
+<!-- Default box -->
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        <h3 class="box-title">Data Aset TI</h3>
+      </div>
+      <div class="box-body">
+        <table id="permintaanTable" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Kode</th>
+              <th>Tanggal</th>
+              <th>TanggalApprove</th>
+              <th>status</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+      </div>
+      <div class="box-footer">
+          <a href="#" data-toggle="modal" data-target="#modal-tambah"><button type="submit" class="btn btn-success pull-right">Tambah Aset</button></a>
+      </div>
+    </div>
+      <div class="modal fade" id="modal-detail">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Detail Aset</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Kode</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="detail1" value="" disabled>
+                </div>
+              </div><br><br>
+
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label" >Tanggal</label>
+
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="detail2" value="" disabled>
+                </div>
+              </div><br><br>
+
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label" >Tanggal Approve</label>
+
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="detail3" value="" disabled>
+                </div>
+              </div><br><br>
+
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
+
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="detail4" value="" disabled>
+                </div>
+              </div>
+
+              <br><br>
+
+              <table id="detailPermintaanTable" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Kode</th>
+                  <th>Jenis</th>
+                  <th>Brand</th>
+                  <th>Jumlah</th>
+                </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+           </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-info pull-right" >Cetak</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <div class="modal fade" id="modal-edit">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Edit Aset</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Kode</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="edit1" value="" >
+                    </div>
+                  </div><br><br>
+    
+                  <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label" >Tanggal</label>
+    
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="edit2" value="">
+                    </div>
+                  </div><br><br>
+    
+                  <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label" >Tanggal Approve</label>
+    
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="edit3" value="">
+                    </div>
+                  </div><br><br>
+    
+                  <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
+    
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="edit4" value="">
+                    </div>
+                  </div>
+
+                  <br><br>
+                  <table id="detailPermintaanTable" class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                      <th>Kode</th>
+                      <th>Jenis</th>
+                      <th>Brand</th>
+                      <th>Jumlah</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      
+                    </tbody>
+                  </table>
+            </div>
+            <div class="modal-footer">
+                <a href="#"><button type="submit" class="btn btn-primary pull-right">Edit Aset</button></a>
+                <a href="index.html"><button type="submit" class="btn btn-danger pull-left">Hapus Aset</button></a>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <div class="modal fade" id="modal-tambah">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Detail Aset</h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Kode</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="tambah1" value="">
+                  </div>
+                </div><br><br>
+  
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Tanggal</label>
+  
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="tambah2" value="">
+                  </div>
+                </div>
+
+                <br><br>
+                
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
+  
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="tambah3" value="Pending" disabled>
+                  </div>
+                </div>
+
+                <br>
+                <br>
+
+                <table id="detailPermintaanAddTable" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>Kode</th>
+                    <th>Jenis</th>
+                    <th>Brand</th>
+                    <th>Jumlah</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    
+                  </tbody>
+                </table>
+
+                
+                <br><br>
+                
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Pilh Aset</label>
+  
+                  <div class="col-sm-10">
+                    <select id="detailAset">
+
+                    </select>
+                  </div>
+                </div>
+
+                <br><br>
+                
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Jumlah</label>
+  
+                  <div class="col-sm-4">
+                    <input id="detailJumlah" type="text" class="form-control" id="detail4" value="">
+                  </div>
+                </div>
+
+                <br><br>
+                
+                <div class="form-group">
+                  <div class="col-sm-12">
+                      <a href="#"><button type="submit" id="addBtn" class="btn btn-primary pull-left">Add Aset</button></a>
+                  </div>
+                </div>
+                
+                <br><br>
+              </div>
+
+              <div class="modal-footer">
+                  <a href="#"><button type="submit" id="submitBtn" class="btn btn-primary pull-right">Submit</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+</section>
+
+
+<!-- jQuery 3 -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
+<!-- FastClick -->
+<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+
+<!-- CUSTOM SCRIPT -->
+<script>
+//table
+  function loadTable(data) {
+    $("#permintaanTable tbody").html("")
+    $.each(data, function(index, item) {
+      $("#permintaanTable tbody").append(`
+        <tr>
+          <td>${item.kode}</td>
+          <td>${item.tanggal}</td>
+          <td>${item.tanggalApprove}</td>
+          <td>${item.status}</td>
+          <td><a href="#" data-toggle="modal" data-target="#modal-detail" class="openDetail" data-item=${JSON.stringify(item)}>Detail</a></td>
+          <td><a href="#" data-toggle="modal" data-target="#modal-edit" class="openEdit" data-item=${JSON.stringify(item)}>Edit</a></td>
+        </tr>
+      `)
+    });
+
+    $('#permintaanTable').DataTable()
+  }
+
+  function loadTableDetail(data) {
+    $("#detailPermintaanTable tbody").html("")
+    $.each(data, function(index, item) {
+      $("#detailPermintaanTable tbody").append(`
+        <tr>
+          <td>${item.kode}</td>
+          <td>${item.jenis}</td>
+          <td>${item.brand}</td>
+          <td>${item.jumlah}</td>
+        </tr>
+      `)
+    });
+  }
+
+  function loadAset(data) {
+    $.each(data, function(index, item) {
+      $("#detailAset").append(`
+        <option value=${JSON.stringify(item)}>${item.kode} ${item.jenis}</option>
+      `)
+    });
+  }
+
+  function loadTableAddDetail(data) {
+    $("#detailPermintaanAddTable tbody").html("")
+    $.each(data, function(index, item) {
+      $("#detailPermintaanAddTable tbody").append(`
+        <tr>
+          <td>${item.kode}</td>
+          <td>${item.jenis}</td>
+          <td>${item.brand}</td>
+          <td>${item.jumlah}</td>
+        </tr>
+      `)
+    });
+  }
+
+  $(function () {
+    var permintaan_aset = JSON.parse(localStorage.getItem("permintaan_aset"))
+    var master_asets = JSON.parse(localStorage.getItem("master_asets"))
+    loadTable(permintaan_aset)
+    loadAset(master_asets)
+    
+    $(".openDetail").click(function(){
+      var detail = $(this).data("item")
+      $("#detail1").val(detail.kode)
+      $("#detail2").val(detail.tanggal)
+      $("#detail3").val(detail.tanggalApprove)
+      $("#detail4").val(detail.status)
+      loadTableDetail(detail.lists)
+    })
+
+    $(".openEdit").click(function(){
+      var detail = $(this).data("item")
+      $("#edit1").val(detail.kode)
+      $("#edti2").val(detail.tanggal)
+      $("#edit3").val(detail.tanggalApprove)
+      $("#edit4").val(detail.status)
+      loadTableDetail(detail.lists)
+    })
+
+    //ADD 
+    var newData = {
+      kode: "",
+      tanggal: "",
+      tanggalApprove: "",
+      status: "Pending",
+      lists: []
+    }
+  
+    $(".openTambah").click(function(){
+      newData = {
+        kode: "",
+        tanggal: "",
+        tanggalApprove: "",
+        status: "Pending",
+        lists: []
+      }
+    })
+
+    $("#addBtn").click(function() {
+      var data  = JSON.parse($("#detailAset").val())
+      var jumlah = $("#detailJumlah").val()
+
+      newData.lists.push({
+        kode: data.kode,
+        jenis: data.jenis,
+        brand: data.brand,
+        jumlah: jumlah,
+      })
+
+      loadTableAddDetail(newData.lists)
+    })
+
+    $("#submitBtn").click(function() {
+      newData.kode = $("#tambah1").val()
+      newData.tanggal = $("#tambah2").val()
+      permintaan_aset.push(newData)
+
+      localStorage.setItem("permintaan_aset", JSON.stringify(permintaan_aset));
+      alert("Permintaan Aset Baru Berhasil !")
+      loadTable(permintaan_aset)
+    })
+  })
+</script>
