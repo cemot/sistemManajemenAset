@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Sistem Manajemen Aset</title>
+  <link rel="icon" href="../dist/img/ui.png" type="image/ico">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
@@ -106,10 +107,9 @@
 
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.0
+      <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
-    reserved.
+    <strong>Sistem Manajemen Aset</strong> Universitas Indonesia.
   </footer>
 </div>
 <!-- ./wrapper -->
@@ -155,10 +155,10 @@
         menu +=`<li data-menu="adminAset/index.html" class="active"><a><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
                 <li data-menu="adminAset/masterAset.html"><a ><i class="fa fa-briefcase"></i> <span>Master Aset</span></a></li>
                 <li data-menu="adminAset/daftarAset.html"><a><i class="fa fa-briefcase"></i> <span>Daftar Aset</span></a></li>
-                <li data-menu="adminAset/permintaanAset.html"><a><i class="fa fa-briefcase"></i> <span>Permintaan Aset</span></a></li>
+                <li data-menu="adminAset/pengadaanAset.html"><a><i class="fa fa-briefcase"></i> <span>Permintaan Aset</span></a></li>
                 `
-
-        $("#mainContent").attr("src", "./adminAset/index.html")
+        
+                $("#mainContent").attr("src", "./adminAset/index.html")
       }
       else if(user.role == 'helpdesk'){
         menu +=`<li data-menu="helpdesk/index.html" class="active"><a><i class="fa fa-home"></i> <span>Laporan</span></a></li>`

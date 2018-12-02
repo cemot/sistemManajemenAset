@@ -1,0 +1,555 @@
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="../../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+ <section class="content-header">
+      <h1>Meminta Pengadaan Aset</h1>
+      <ol class="breadcrumb">
+        <li><i class="fa fa-briefcase"></i> Meminta Pengadaaan Aset</li>
+      </ol>
+ </section>
+ <section class="content">
+ <div class="row">
+        <div class="col-xs-12">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#pengadaan" data-toggle="tab">Meminta Pengadaan</a></li>
+              <li><a href="#diproses" data-toggle="tab">Diproses</a></li>
+              <li><a href="#selesai" data-toggle="tab">Selesai</a></li>
+              <li><a href="#ditolak" data-toggle="tab">Ditolak</a></li>
+            </ul>
+            <br><br>
+            <div class="tab-content">
+              <!-- Font Awesome Icons -->
+              <div class="tab-pane active" id="pengadaan">
+                <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Kode</th>
+                  <th>Jenis</th>
+                  <th>Jumlah</th>
+                  <th>Prioritas</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>P001</td>
+                  <td>Laptop</td>
+                  <td>12</td>
+                  <td>High</td>
+                  <td><a href="#" data-toggle="modal" data-target="#modal-detail">Detail</a></td>
+                  <td><a href="#" data-toggle="modal" data-target="#modal-edit">Edit</a></td>
+                </tr>
+                 <tr>
+                  <td>P002</td>
+                  <td>Printer</td>
+                  <td>10</td>
+                  <td>Medium</td>
+                  <td><a href="#" data-toggle="modal" data-target="#modal-detail">Detail</a></td>
+                  <td><a href="#" data-toggle="modal" data-target="#modal-edit">Edit</a></td>
+                </tr>
+                 <tr>
+                  <td>P003</td>
+                  <td>Router</td>
+                  <td>7</td>
+                  <td>Critical</td>
+                  <td><a href="#" data-toggle="modal" data-target="#modal-detail">Detail</a></td>
+                  <td><a href="#" data-toggle="modal" data-target="#modal-edit">Edit</a></td>
+                </tr>
+                </tbody>
+         </table>
+              </div>
+              <div class="tab-pane" id="diproses">
+                <table id="example3" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Kode</th>
+                  <th>Jenis</th>
+                  <th>Jumlah</th>
+                  <th>Prioritas</th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                 <tr>
+                  <td>P005</td>
+                  <td>Printer</td>
+                  <td>5</td>
+                  <td>Medium</td>
+                  <td><a href="#" data-toggle="modal" data-target="#modal-detail">Detail</a></td>
+                </tr>
+                 <tr>
+                  <td>P006</td>
+                  <td>Router</td>
+                  <td>8</td>
+                  <td>Critical</td>
+                  <td><a href="#" data-toggle="modal" data-target="#modal-detail">Detail</a></td>
+                </tr>
+                </tbody>
+         </table>
+              </div>
+              <div class="tab-pane" id="selesai">
+                <table id="example4" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Kode</th>
+                  <th>Jenis</th>
+                  <th>Jumlah</th>
+                  <th>Prioritas</th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                 <tr>
+                  <td>P007</td>
+                  <td>Router</td>
+                  <td>3</td>
+                  <td>Critical</td>
+                  <td><a href="#" data-toggle="modal" data-target="#modal-detail">Detail</a></td>
+                </tr>
+                </tbody>
+         </table>
+              </div>
+              <div class="tab-pane" id="ditolak">
+                <table id="example5" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Kode</th>
+                  <th>Jenis</th>
+                  <th>Jumlah</th>
+                  <th>Prioritas</th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                 <tr>
+                  <td>P004</td>
+                  <td>Keyboard</td>
+                  <td>15</td>
+                  <td>Low</td>
+                  <td><a href="#" data-toggle="modal" data-target="#modal-detailtolak">Detail</a></td>
+                </tr>
+                </tbody>
+         </table>
+              </div>
+              <!-- /#ion-icons -->
+
+            </div>
+            <!-- /.tab-content -->
+          </div>
+           <br><br><a href="#" data-toggle="modal" data-target="#modal-tambah"><button type="submit" class="btn btn-success pull-right">Tambah Permintaan</button></a>
+      </div>
+      <div class="modal fade" id="modal-detail">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Detail Aset</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Kode</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="P001" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Jenis Aset</label>
+
+                  <div class="col-sm-10">
+                   <input type="text" class="form-control" id="inputEmail3" value="Laptop" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Brand</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="IBM" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Jumlah</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="12" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Tanggal Permohonan</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="11/8/2018" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Tanggal Approval</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Prioritas</label>
+                  
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Status" value="High" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
+                  
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Status" value="Meminta Pengadaan" disabled>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+       <div class="modal fade" id="modal-detailtolak">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Detail Aset</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Kode</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="P004" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Jenis Aset</label>
+
+                  <div class="col-sm-10">
+                   <input type="text" class="form-control" id="inputEmail3" value="Laptop" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Brand</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="IBM" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Jumlah</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="12" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Tanggal Permohonan</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="11/8/2018" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
+                  
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Status" value="Ditolak" disabled>
+                  </div>
+                </div><br><br>
+                 <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Deskripsi</label>
+                  
+                  <div class="col-sm-10">
+                    <textarea class="form-control" disabled>Tidak sesuai dengan RIB</textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+     <div class="modal fade" id="modal-edit">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Edit Aset</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Kode</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="P001" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Jenis Aset</label>
+
+                  <div class="col-sm-10">
+                    <select class="form-control">
+                      <option>Laptop - P001</option>
+                      <option>Printer - P002</option>
+                      <option>Router - P003</option>
+                  </select>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Brand</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="IBM">
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Jumlah</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="12">
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Tanggal Permohonan</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="11/8/2018" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Prioritas</label>
+
+                  <div class="col-sm-10">
+                    <select class="form-control">
+                      <option>High</option>
+                      <option>Critical</option>
+                      <option>Medium</option>
+                      <option>Low</option>
+                  </select>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Tanggal Approval</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
+                  
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Status" value="Meminta Pengadaan" disabled>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                  <a href="#" data-toggle="modal" data-target="#modal-konfirmasi-yes"><button type="submit" class="btn btn-success pull-right">Simpan</button></a>
+                  <a href="#" data-toggle="modal" data-target="#modal-konfirmasi-no"><button type="submit" class="btn btn-danger pull-left">Hapus Permintaan Aset</button></a>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+         <div class="modal fade" id="modal-tambah">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Edit Aset</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Kode</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="P008" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Jenis Aset</label>
+
+                  <div class="col-sm-10">
+                    <select class="form-control">
+                      <option>Laptop - P001</option>
+                      <option>Printer - P002</option>
+                      <option>Router - P003</option>
+                  </select>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Brand</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="Brand Aset">
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Jumlah</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="jumlah aset">
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Prioritas</label>
+
+                  <div class="col-sm-10">
+                    <select class="form-control">
+                      <option>Critical</option>
+                      <option>High</option>
+                      <option>Medium</option>
+                      <option>Low</option>
+                  </select>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Tanggal Permohonan</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="datepicker" placeholder="Tanggal Permohonan">
+                  </div>
+                </div><br><br>
+              </div>
+              <div class="modal-footer">
+                  <a href="#" data-toggle="modal" data-target="#modal-konfirmasi-yes"><button type="submit" class="btn btn-primary pull-right">Tambah Permintaan</button></a>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+  <div id="modal-konfirmasi-no" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+  <div class="modal-content">
+ 
+   <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Konfirmasi</h4>
+   </div>
+ 
+   <div class="modal-body">
+    <b>Apakah Anda Yakin Ingin Menghapus Permintaan Ini?</b>
+   </div>
+ 
+   <div class="modal-footer">
+     <a href="pengadaanAset.html"><button type="button" class="btn btn-danger">Ya</button></a>
+     <button type="button" class="btn btn-success" data-dismiss="modal">Tidak</button>
+   </div>
+ 
+  </div>
+ </div>
+</div>
+            <!-- modal konfirmasi-->
+<div id="modal-konfirmasi-yes" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+  <div class="modal-content">
+ 
+   <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Konfirmasi</h4>
+   </div>
+ 
+   <div class="modal-body">
+    <b>Apakah Data yang Diisi Sudah Benar?</b>
+   </div>
+ 
+   <div class="modal-footer">
+     <a href="pengadaanAset.html"><button type="button" class="btn btn-success">Ya</button></a>
+     <button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
+   </div>
+ 
+  </div>
+ </div>
+</div>      
+  </section>
+
+
+ <!-- jQuery 3 -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<!-- FastClick -->
+<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<script>
+  //date
+  $('#datepicker').datepicker({
+      autoclose: true
+    })
+  
+  //table
+    $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+  //table
+    $(function () {
+    $('#example3').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+    //table
+    $(function () {
+    $('#example4').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+    //table
+    $(function () {
+    $('#example5').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>

@@ -1,97 +1,141 @@
-<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-<link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
-<link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
-<link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
-<link rel="stylesheet" href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
-<section class="content-header">
-    <h1>Data Aset</h1>
-    <ol class="breadcrumb">
-      <li><i class="fa fa-briefcase"></i> Daftar Aset</li>
-    </ol>
-</section>
-<section class="content">
-<!-- Default box -->
-    <div class="box box-primary">
-      <div class="box-header with-border">
-        <h3 class="box-title">Data Aset TI</h3>
+ <section class="content-header">
+      <h1>Data Aset</h1>
+      <ol class="breadcrumb">
+        <li><i class="fa fa-briefcase"></i> Daftar Aset</li>
+      </ol>
+ </section>
+ <section class="content">
+ <!-- Default box -->
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Data Aset TI</h3>
+
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                    title="Collapse">
+              <i class="fa fa-minus"></i></button>
+          </div>
+        </div>
+        <div class="box-body">
+          <table id="tabelAset" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Kode</th>
+                  <th>Nama Aset</th>
+                  <th>Lokasi</th>
+                  <th>Status</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+        </div>
+        <!-- /.box-footer-->
       </div>
-      <div class="box-body">
-        <table id="asetTable" class="table table-bordered table-striped">
-          <thead>
-            <tr>
-              <th>No Serial</th>
-              <th>Jenis</th>
-              <th>Lokasi</th>
-              <th>Maintenance</th>
-              <th>Status</th>
-              <th>Umur</th>
-              <th></th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            
-          </tbody>
-        </table>
-      </div>
-    </div>
-      <div class="modal fade" id="modal-detail">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title">Detail Aset</h4>
-            </div>
-            <div class="modal-body">
-              <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">No Serial</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="detail1" value="" disabled>
+         <div class="modal fade" id="modal-detail">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Detail Aset</h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Kode Aset</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="detail1" value="" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Nomer Serial</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="detail2" value="" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Nama Aset</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="detail3" value="" disabled>
+                  </div>
+                </div><br><br>
+                 <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Jenis Aset</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="detail4" value="" disabled>
+                  </div>
+                </div><br><br>
+                  <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Brand</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="detail5" value="" disabled>
+                  </div>
+                </div><br><br>
+                 <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Lokasi</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="detail6" value="" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="detail7" value="" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Kode Laporan</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="detail8" value="" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Deskripsi Masalah</label>
+
+                  <div class="col-sm-10">
+                   <textarea class="form-control" rows="2" id="detail9" disabled></textarea>
+                  </div>
+                </div><br><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Status Pengerjaan</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="detail10" value="" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Bukti Masalah</label>
+
+                  <div class="col-sm-10" id="detail11">
+                    <a target="_blank" rel="noopener noreferrer" href="../../dist/img/photo2.png">Bukti Masalah.jpg</a>,&nbsp
+                    <a target="_blank" rel="noopener noreferrer" href="../../dist/img/photo3.png">Bukti Masalah1.jpg</a>,&nbsp
+                    <a target="_blank" rel="noopener noreferrer" href="../../dist/img/photo4.png">Bukti Masalah2.jpg</a>&nbsp
+                  </div>
                 </div>
-              </div><br><br>
-
-              <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label" >Jenis</label>
-
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="detail2" value="" disabled>
-                </div>
-              </div><br><br>
-
-              <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label" >Lokasi</label>
-
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="detail3" value="" disabled>
-                </div>
-              </div><br><br>
-
-              <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label" >Maintenance</label>
-
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="detail4" value="" disabled>
-                </div>
-              </div><br><br>
-              <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
-
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="detail5" value="" disabled>
-                </div>
-              </div><br><br>
-
-              <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label" >Umur</label>
-
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="detail6" value="" disabled>
-                </div>
+             </div>
+              <div class="modal-footer">
               </div>
                
            </div>
@@ -101,69 +145,125 @@
           </div>
           <!-- /.modal-content -->
         </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <div class="modal fade" id="modal-edit">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title">Edit Aset</h4>
-            </div>
-            <div class="modal-body">
-              <div class="box">
-                <div class="box-body">
-                  <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label" >No Serial</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="edit1" value="" disabled>
-                    </div>
-                  </div><br><br>
-                  <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label" >Jenis</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="edit2" value="" >
-                    </div>
-                  </div><br><br>
-                  <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label" >Lokasi</label>
-                    <div class="col-sm-10">
-                      <select id="edit3" class="form-control">
-                      </select>
-                    </div>
-                  </div><br><br>
-                  <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label" >Maintenance</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="edit4" value="" >
-                    </div>
-                  </div><br><br>
-                  <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
-                    <div class="col-sm-10">
-                        <select id="edit5" class="form-control">
-                          <option>Baik</option>
-                          <option>Rusak</option>
-                          <option>Hilang</option>
-                          <option>Maintenance</option>
-                        </select>
-                    </div>
-                  </div>
-                </div>
+        <div class="modal fade" id="modal-edit">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Edit Aset</h4>
               </div>
-              
-            </div>
-            <div class="modal-footer">
-                <a href="#"><button type="submit" class="btn btn-primary pull-right">Edit Aset</button></a>
-                <a href="index.html"><button type="submit" class="btn btn-danger pull-left">Hapus Aset</button></a>
+              <div class="modal-body">
+                  <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Kode Aset</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="edit1" value="" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Nomer Serial</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="edit2" value="">
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Nama Aset</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="edit3" value="">
+                  </div>
+                </div><br><br>
+                 <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Jenis Aset</label>
+
+                  <div class="col-sm-10">
+                    <select id="edit4" class="form-control">
+                      
+                  </select>
+                  </div>
+                </div><br><br>
+                  <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Brand</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="edit5" value="">
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
+                  
+                  <div class="col-sm-10">
+                    <select id="edit6" class="form-control">
+                      <option>Tersedia</option>
+                      <option>Rusak</option>
+                      <option>Dalam Pemeliharaan</option>
+                      <option>Dijual</option>
+                  </select>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="edit7" class="col-sm-2 control-label" >Lokasi</label>
+
+                  <div class="col-sm-10">
+                      <select id="edit7" class="form-control">
+                    </select>
+                  </div>
+                </div><br><br>
+              </div>
+              <div class="modal-footer">
+                  <a href="#" data-toggle="modal" data-target="#modal-konfirmasi-yes"><button type="submit" class="btn btn-success pull-right">Simpan</button></a>
+                  <a href="#" data-toggle="modal" data-target="#modal-konfirmasi-no"><button type="submit" class="btn btn-danger pull-left">Hapus Aset</button></a>
+              </div>
             </div>
           </div>
           <!-- /.modal-content -->
         </div>
-        <!-- /.modal-dialog -->
-      </div>
-</section>
+         <div id="modal-konfirmasi-no" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+  <div class="modal-content">
+ 
+   <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Konfirmasi</h4>
+   </div>
+ 
+   <div class="modal-body">
+    <b>Apakah Anda Yakin Ingin Menghapus Aset Ini?</b>
+   </div>
+ 
+   <div class="modal-footer">
+     <a href="daftarAset.html"><button type="button" class="btn btn-danger">Ya</button></a>
+     <button type="button" class="btn btn-success" data-dismiss="modal">Tidak</button>
+   </div>
+ 
+  </div>
+ </div>
+</div>
+            <!-- modal konfirmasi-->
+<div id="modal-konfirmasi-yes" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+  <div class="modal-content">
+ 
+   <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Konfirmasi</h4>
+   </div>
+ 
+   <div class="modal-body">
+    <b>Apakah Data yang Diisi Sudah Benar?</b>
+   </div>
+ 
+   <div class="modal-footer">
+     <button type="button" id="editBtn" class="btn btn-success">Ya</button>
+     <button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
+   </div>
+ 
+  </div>
+ </div>
+</div>
+  </section>
 
 
 <!-- jQuery 3 -->
@@ -183,32 +283,40 @@
 <script src="../../dist/js/demo.js"></script>
 
 <!-- CUSTOM SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+
 <script>
 //table
   function loadTable(data) {
-    $("#asetTable tbody").html("")
+    $("#tabelAset tbody").html("")
     $.each(data, function(index, item) {
-      $("#asetTable tbody").append(`
+      $("#tabelAset tbody").append(`
         <tr>
-          <td>${item.noSerial}</td>
-          <td>${item.jenis}</td>
+          <td>${item.kodeAset}</td>
+          <td>${item.nama}</td>
           <td>${item.lokasi}</td>
-          <td>${item.maintenance}</td>
           <td>${item.status}</td>
-          <th>${item.umur}</th>
-          <td><a href="#" data-toggle="modal" data-target="#modal-detail" class="openDetail" data-item=${JSON.stringify(item)}>Detail</a></td>
-          <td><a href="#" data-toggle="modal" data-target="#modal-edit" class="openEdit" data-item=${JSON.stringify(item)}>Edit</a></td>
+          <td><a href="#" data-toggle="modal" data-target="#modal-detail" class="openDetail" data-item=${item.kodeAset}>Detail</a></td>
+          <td><a href="#" data-toggle="modal" data-target="#modal-edit" class="openEdit" data-item=${item.kodeAset}>Edit</a></td>
         </tr>
       `)
     });
 
-    $('#asetTable').DataTable()
+    $('#tabelAset').DataTable()
   }
 
-  function loadKategoriAset(data) {
+  function loadLocation(data) {
     $.each(data, function(index, item) {
-      $("#edit3").append(`
-        <option value=${item.name}>${item.name}</option>
+      $("#edit7").append(
+        "<option value='" + item.name + "'>" + item.name + "</option>"
+      )
+    });
+  }
+
+  function loadMasterAset(data) {
+    $.each(data, function(index, item) {
+      $("#edit4").append(`
+        <option value=${item.jenis}>${item.jenis}</option>
       `)
     });
   }
@@ -216,28 +324,51 @@
   $(function () {
     var asets = JSON.parse(localStorage.getItem("asets"))
     var locations = JSON.parse(localStorage.getItem("locations"))
+    var master_asets = JSON.parse(localStorage.getItem("master_asets"))
     loadTable(asets)
-    loadKategoriAset(locations)
+    loadLocation(locations)
+    loadMasterAset(master_asets)
     
     $(".openDetail").click(function(){
-      var detail = $(this).data("item")
-      console.log(detail)
-      $("#detail1").val(detail.noSerial)
-      $("#detail2").val(detail.jenis)
-      $("#detail3").val(detail.lokasi)
-      $("#detail4").val(detail.maintenance)
-      $("#detail5").val(detail.status)
-      $("#detail6").val(detail.umur)
+      var detail = _.find(asets, { kodeAset:$(this).data("item")})
+      $("#detail1").val(detail.kodeAset)
+      $("#detail2").val(detail.noSerial)
+      $("#detail3").val(detail.nama)
+      $("#detail4").val(detail.jenis)
+      $("#detail5").val(detail.brand)
+      $("#detail6").val(detail.lokasi)
+      $("#detail7").val(detail.status)
+      $("#detail8").val(detail.kodeLaporan)
+      $("#detail9").val(detail.desc)
+      $("#detail10").val(detail.statusPengerjaan)
     })
 
     $(".openEdit").click(function(){
-      var detail = $(this).data("item")
-      $("#edit1").val(detail.noSerial)
-      $("#edit2").val(detail.jenis)
-      $("#edit3").val(detail.lokasi)
-      $("#edit4").val(detail.maintenance)
-      $("#edit5").val(detail.status)
-      $("#edit6").val(detail.umur)
+      var detail = _.find(asets, { kodeAset:$(this).data("item")})
+      $("#edit1").val(detail.kodeAset)
+      $("#edit2").val(detail.noSerial)
+      $("#edit3").val(detail.nama)
+      $("#edit4").val(detail.jenis)
+      $("#edit5").val(detail.brand)
+      $("#edit6").val(detail.status)
+      $("#edit7").val(detail.lokasi)
+    })
+
+    $("#editBtn").click(function() {
+      var detail = _.find(asets, { kodeAset:$("#edit1").val()})
+      var index = _.findIndex(asets, { kodeAset:$("#edit1").val()})
+
+      detail.noSerial = $("#edit2").val()
+      detail.nama = $("#edit3").val()
+      detail.jenis = $("#edit4").val()
+      detail.brand = $("#edit5").val()
+      detail.status = $("#edit6").val()
+      detail.lokasi = $("#edit7").val()
+
+      asets.splice(index, 1, detail);
+      loadTable(asets)
+      localStorage.setItem("asets", JSON.stringify(asets));
+      $('#modal-konfirmasi-yes, #modal-edit').modal('toggle');
     })
   })
 </script>

@@ -221,6 +221,7 @@
 <script src="../../dist/js/demo.js"></script>
 
 <!-- CUSTOM SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 <script>
 //table
   function loadTable(data) {
@@ -233,8 +234,8 @@
           <td>${item.brand}</td>
           <td>${item.prioritas}</td>
           <th>${item.total}</th>
-          <td><a href="#" data-toggle="modal" data-target="#modal-detail" class="openDetail" data-item=${JSON.stringify(item)}>Detail</a></td>
-          <td><a href="#" data-toggle="modal" data-target="#modal-edit" class="openEdit" data-item=${JSON.stringify(item)}>Edit</a></td>
+          <td><a href="#" data-toggle="modal" data-target="#modal-detail" class="openDetail" data-item=${(item.kode)}>Detail</a></td>
+          <td><a href="#" data-toggle="modal" data-target="#modal-edit" class="openEdit" data-item=${(item.kode)}>Edit</a></td>
         </tr>
       `)
     });
@@ -253,11 +254,12 @@
   $(function () {
     var master_asets = JSON.parse(localStorage.getItem("master_asets"))
     var aset_categories = JSON.parse(localStorage.getItem("aset_categories"))
+
     loadTable(master_asets)
     loadKategoriAset(aset_categories)
     
     $(".openDetail").click(function(){
-      var detail = $(this).data("item")
+      var detail = _.find(master_asets, { kode:  $(this).data("item")});
       $("#detail1").val(detail.kode)
       $("#detail2").val(detail.jenis)
       $("#detail3").val(detail.brand)
@@ -266,7 +268,7 @@
     })
 
     $(".openEdit").click(function(){
-      var detail = $(this).data("item")
+      var detail = _.find(master_asets, { kode:  $(this).data("item")});
       $("#edit1").val(detail.kode)
       $("#edit2").val(detail.jenis)
       $("#edit3").val(detail.brand)

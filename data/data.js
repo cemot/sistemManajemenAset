@@ -46,8 +46,8 @@ var data = {
       kategori: 'Hardware'
     },
     {
-      kode: 'A00002',
-      jenis: 'Mouse',
+      kode: 'A00003',
+      jenis: 'Komputer',
       brand: 'Logitec',
       prioritas: 2,
       total: 80,
@@ -69,27 +69,45 @@ var data = {
   asets:
   [
     {
-      noSerial: 'AS0129',
-      jenis: 'Asus-Laptop',
-      lokasi: 'R01-01',
-      maintenance: '23-12-2018',
-      status: 'Baik',
-      umur: '29-Bulan'
+      kodeAset: 'AS0129',
+      noSerial: '11512512512',
+      nama: 'Komputer001',
+      jenis: 'Komputer',
+      brand: 'IBM',
+      lokasi: 'Lab Komputer 1',
+      status: 'Rusak',
+      kodeLaporan: 'L001',
+      desc: 'Komputer tidak bisa menyala',
+      statusPengerjaan: 'Dikerjakan',
+      bukti: [{file:'bukti1.jpg', file:'bukti2.jpg', file:'bukti3.jpg'}],
+    },
+    {
+      kodeAset: 'AS0130',
+      noSerial: '11512512512',
+      nama: 'Komputer002',
+      jenis: 'Komputer',
+      brand: 'IBM',
+      lokasi: 'Lab Komputer 2',
+      status: 'Rusak',
+      kodeLaporan: 'L002',
+      desc: 'Komputer tidak bisa menyala',
+      statusPengerjaan: 'Dikerjakan',
+      bukti: [{file:'bukti1.jpg', file:'bukti2.jpg', file:'bukti3.jpg'}],
     },
   ],
   locations:
   [
     {
-      name: 'R01-01',
-      desc: 'Ruang 1 Gedung 1'
+      name: 'Lab Komputer 1',
+      desc: 'Lab Komputer 1'
     },
     {
-      name: 'R02-02',
-      desc: 'Ruang 2 Gedung 1'
+      name: 'Lab Komputer 2',
+      desc: 'Lab Komputer 1'
     },
     {
-      name: 'R02-03',
-      desc: 'Ruang 2 Gedung 2'
+      name: 'Lab Komputer 3',
+      desc: 'Lab Komputer 1'
     }
   ],
   permintaan_aset: 

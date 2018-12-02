@@ -4,10 +4,9 @@
   <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="../../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
   <link rel="stylesheet" href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
-
  <section class="content-header">
       <h1>Data Permintaan</h1>
       <ol class="breadcrumb">
@@ -21,8 +20,6 @@
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
               <i class="fa fa-minus"></i></button>
-            <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-              <i class="fa fa-times"></i></button>
           </div>
         </div>
         <div class="box-body">
@@ -31,45 +28,234 @@
                 <tr>
                   <th>Kode</th>
                   <th>Jenis</th>
-                  <th>Jumlah</th>
+                  <th>Tanggal Permohonan</th>
                   <th>Prioritas</th>
-                  <th>Status</th>
+                  <th>Jumlah</th>
+                  <th></th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                   <td>P001</td>
                   <td>Laptop</td>
-                  <td>15</td>
-                  <td>Penting</td>
-                  <td>Meminta Pengadaan</td>
+                  <td>9/11/2018</td>
+                  <td>High</td>
+                  <td>10</td>
+                  <td><a href="#" data-toggle="modal" data-target="#modal-detail">Detail</a></td>
                 </tr>
                  <tr>
                   <td>P002</td>
-                  <td>printer</td>
-                  <td>10</td>
-                  <td>Penting</td>
-                  <td>Meminta Pengadaan</td>
+                  <td>Printer</td>
+                  <td>9/11/2018</td>
+                  <td>Medium</td>
+                  <td>12</td>
+                  <td><a href="#" data-toggle="modal" data-target="#modal-detail">Detail</a></td>
                 </tr>
                  <tr>
                   <td>P003</td>
                   <td>Router</td>
-                  <td>7</td>
-                  <td>Penting</td>
-                  <td>Meminta Pengadaan</td>
+                  <td>9/11/2018</td>
+                  <td>Critical</td>
+                  <td>5</td>
+                  <td><a href="#" data-toggle="modal" data-target="#modal-detail">Detail</a></td>
                 </tr>
                 </tbody>
          </table>
         </div>
         <!-- /.box-body -->
         <div class="box-footer">
-          <a href="tanggapiPermintaan.html"><button type="submit" class="btn btn-success pull-right">Tanggapi Permintaan</button></a>
+          <a href="#" data-toggle="modal" data-target="#modal-tanggapi"><button type="submit" class="btn btn-success pull-right">Tanggapi Permintaan</button></a>
         </div>
         <!-- /.box-footer-->
       </div>
+      <div class="modal fade" id="modal-detail">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Detail Pengadaan</h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Kode Pengadaan</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="PE001" disabled>
+                  </div>
+                </div><br><br>
+                 <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Jenis</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="Laptop" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Jumlah</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" value="10" disabled>
+                  </div>
+                </div><br><br>
+                  <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Prioritas</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="jumlah" value="High" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Tanggal Permohonan</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="harga" value="9/10/2018" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Status" value="Meminta Pengadaan" disabled>
+                  </div>
+                </div><br><br>
+             </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <div class="modal fade" id="modal-tanggapi">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Tanggapi Permintaan</h4>
+              </div>
+              <div class="modal-body">
+                 <div id="field">
+                <div id="field0">
+                  <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Tanggal Approval</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="datepicker" placeholder="Tanggal Approval">
+                  </div>
+                </div><br><br><br>
+                <button id="add-more" name="add-more" class="btn btn-primary pull-right"><i class="fa fa-plus"></i></button><br><br>
+                <div class="form-group">
+                  <label for="jenis" class="col-sm-2 control-label" >Jenis</label>
+
+                  <div class="col-sm-10">
+                    <select class="form-control">
+                      <option>Laptop - P001</option>
+                      <option>Printer - P002</option>
+                      <option>Router - P003</option>
+                    </select>
+                    </div>
+                  </div><br><br>
+                  
+                <div class="form-group">
+                  <label for="jumlah" class="col-sm-2 control-label" >Jumlah</label>
+
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" id="jumlah" placeholder="Jumlah Aset" >
+                  </div>
+                </div><br><br>
+              </div>
+             </div>
+             </div>
+             <div class="modal-footer">
+              <a href="#" data-toggle="modal" data-target="#modal-konfirmasi-no"><button type="submit" class="btn btn-danger pull-left">Tolak Permintaan</button></a>
+              <a href="#" data-toggle="modal" data-target="#modal-konfirmasi-yes"><button type="submit" class="btn btn-success pull-right">Terima Permintaan</button></a>
+             </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <div class="modal fade" id="modal-terima">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                 <center><h3>Permintaan Berhasil Diterima</h3></center>
+             <div class="modal-footer">
+               <a href="index.html"><button type="submit" class="btn btn-default pull-right">Close</button></a>
+             </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+      </div>
+            <!-- modal konfirmasi-->
+<div id="modal-konfirmasi-no" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+  <div class="modal-content">
+ 
+   <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Konfirmasi</h4>
+   </div>
+ 
+   <div class="modal-body">
+    <b>Apakah Anda yakin ingin Menolak permintaan ini?</b>
+   </div>
+ 
+   <div class="modal-footer">
+     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-tolak">Ya</button>
+     <button type="button" class="btn btn-success" data-dismiss="modal">Tidak</button>
+   </div>
+ 
+  </div>
+ </div>
+</div>
+            <!-- modal konfirmasi-->
+<div id="modal-konfirmasi-yes" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+  <div class="modal-content">
+ 
+   <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Konfirmasi</h4>
+   </div>
+ 
+   <div class="modal-body">
+    <b>Apakah Anda yakin ingin Menerima Permintaan ini?</b>
+   </div>
+ 
+   <div class="modal-footer">
+     <a href="tambahPengadaan.html"><button type="button" class="btn btn-success">Ya</button></a>
+     <button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
+   </div>
+ 
+  </div>
+ </div>
+</div>
+      <div class="modal fade" id="modal-tolak">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Alasan Penolakan</h4>
+              </div>
+              <div class="modal-body">
+                  <textarea class="form-control" placeholder="Alasan Penolakan"></textarea>
+             <div class="modal-footer">
+               <a href="index.html"><button type="submit" class="btn btn-success pull-right">Simpan</button></a>
+             </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+      </div>
+
   </section>
 
-  <!-- jQuery 3 -->
+ <!-- jQuery 3 -->
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -77,7 +263,7 @@
 <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-
+<script src="../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <!-- FastClick -->
 <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
@@ -85,6 +271,10 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
 <script>
+  //date
+  $('#datepicker').datepicker({
+      autoclose: true
+    })
 
 //table
     $(function () {
@@ -98,4 +288,33 @@
       'autoWidth'   : false
     })
   })
+    //add more
+$(document).ready(function () {
+    //@naresh action dynamic childs
+    var next = 0;
+    $("#add-more").click(function(e){
+        e.preventDefault();
+        var addto = "#field" + next;
+        var addRemove = "#field" + (next);
+        next = next + 1;
+        var newIn = ' <div id="field'+ next +'" name="field'+ next +'"><!-- Text input--><div class="form-group"><label for="jenis" class="col-sm-2 control-label">Kode</label><div class="col-sm-10"><select class="form-control"><option>P001 - Laptop</option><option>P002 - Printer</option><option>P003 - Router</option></select></div></div><br><br><div class="form-group"><label for="jumlah" class="col-sm-2 control-label">Jumlah</label><div class="col-sm-10"><input type="number" class="form-control" id="jumlah" placeholder="Jumlah Aset"></div></div><br><br></div>';
+        var newInput = $(newIn);
+        var removeBtn = '<button id="remove' +next+ '" class="btn btn-danger remove-me pull-right"><i class="fa fa-minus"></i></button></div></div><div id="field"><br><br>';
+        var removeButton = $(removeBtn);
+        $(addto).after(newInput);
+        $(addRemove).after(removeButton);
+        $("#field" + next).attr('data-source',$(addto).attr('data-source'));
+        $("#count").val(next);  
+        
+            $('.remove-me').click(function(e){
+              next = next-1;
+                e.preventDefault();
+                var fieldNum = this.id.charAt(this.id.length-1);
+                var fieldID = "#field" + fieldNum;
+                $(this).remove();
+                $(fieldID).remove();
+            });
+    });
+
+});
 </script>

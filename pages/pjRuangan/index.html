@@ -32,8 +32,8 @@
                 <thead>
                 <tr>
                   <th>Kode</th>
-                  <th>Vendor</th>
-                  <th>Total Harga</th>
+                  <th>Deskripsi Masalah</th>
+                  <th>Prioritas</th>
                   <th>Status</th>
                   <th></th>
                   <th></th>
@@ -41,10 +41,10 @@
                 </thead>
                 <tbody>
                 <tr>
-                  <td>PE001</td>
-                  <td>Vendor 1</td>
-                  <td>Rp. 20.000.000</td>
-                  <td>Selesai</td>
+                  <td>L001</td>
+                  <td>Komputer Tidak Bisa Menyala</td>
+                  <td>Penting</td>
+                  <td>Belum Terverifikasi</td>
                   <td><a href="#" data-toggle="modal" data-target="#modal-detail">Detail</a></td>
                   <td><a href="#" data-toggle="modal" data-target="#modal-edit">Edit</a></td>
                 </tr>
@@ -70,72 +70,64 @@
                   <label for="inputEmail3" class="col-sm-2 control-label" >Kode Laporan</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="PE001" disabled>
+                    <input type="text" class="form-control" id="inputEmail3" value="L001" disabled>
                   </div>
-                </div><br><br>
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Vendor</label>
-
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="Vendor 1" disabled>
-                  </div>
-                </div><br><br>
+                </div><br><br>              
                   <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Jumlah Aset</label>
+                  <label for="inputEmail3" class="col-sm-2 control-label">Deskripsi Masalah</label>
 
                   <div class="col-sm-10">
-                    <input type="number" class="form-control" id="jumlah" value="10" disabled>
+                   <textarea class="form-control" rows="2" disabled>Komputer tidak bisa menyala</textarea>
                   </div>
-                </div><br><br>
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Total Harga</label>
+                </div><br><br><br>
+                 <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Prioritas Laporan</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="harga" value="Rp. 14.000.000" disabled>
+                    <input type="text" class="form-control" id="Status" value="Penting" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Status" value="Selesai" disabled>
+                    <input type="text" class="form-control" id="Status" value="Belum Terverifikasi" disabled>
                   </div>
                 </div><br><br>
+                 <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Bukti Masalah</label>
+
+                  <div class="col-sm-10">
+                     <a target="_blank" rel="noopener noreferrer" href="../../dist/img/photo2.png">Bukti Masalah.jpg</a>,&nbsp
+                    <a target="_blank" rel="noopener noreferrer" href="../../dist/img/photo3.png">Bukti Masalah1.jpg</a>,&nbsp
+                    <a target="_blank" rel="noopener noreferrer" href="../../dist/img/photo4.png">Bukti Masalah2.jpg</a>&nbsp
+                  </div>
+                </div>
                  <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>Nomor</th>
-                  <th>Jenis</th>
-                  <th>Jumlah</th>
-                  <th>Harga</th>
-                  <th></th>
+                  <th>Lokasi Aset</th>
+                  <th>Jenis Aset</th>
+                  <th>Nama Aset</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                   <td>1</td>
-                  <td>Laptop</td>
-                  <td>5</td>
-                  <td>Rp. 5.000.000</td>
-                </tr>
-                 <tr>
-                  <td>2</td>
+                  <td>Lab Komputer</td>
                   <td>Komputer</td>
-                  <td>3</td>
-                  <td>Rp. 7.000.000</td>
+                  <td>K001 - Komputer</td>
                 </tr>
                  <tr>
-                  <td>3</td>
-                  <td>Router</td>
                   <td>2</td>
-                  <td>Rp. 2.000.000</td>
+                  <td>Lab Komputer</td>
+                  <td>Komputer</td>
+                  <td>K002 - Komputer</td>
                 </tr>
                 </tbody>
               </table>
              </div>
-              <div class="modal-footer">
-                  <button type="submit" class="btn btn-info pull-right" >Cetak</button>
-              </div>
             </div>
             <!-- /.modal-content -->
           </div>
@@ -152,107 +144,117 @@
               <div class="modal-body">
               <div class="box">
                 <div class="box-body">
-                   <div class="form-group">
+                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Kode Laporan</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="PE001" disabled>
-                  </div>
-                </div><br><br>
-               <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Pilih Vendor</label>
-
-                  <div class="col-sm-10">
-                    <select class="form-control">
-                      <option>Vendor 1</option>
-                      <option>Vendor 2</option>
-                      <option>Vendor 3</option>
-                  </select>
+                    <input type="text" class="form-control" id="inputEmail3" value="L001" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
+                  <label for="inputEmail3" class="col-sm-2 control-label">Deskripsi Masalah</label>
+
+                  <div class="col-sm-10">
+                   <textarea class="form-control" rows="2">Komputer tidak bisa menyala</textarea>
+                  </div>
+                </div><br><br><br>
+                 <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Prioritas Laporan</label>
+
                   <div class="col-sm-10">
                     <select class="form-control">
-                      <option>Sedang Diproses</option>
-                      <option>Selesai</option>
-                      <option>Ditolak</option>
-                    </select>
+                      <option>Penting</option>
+                      <option>Tidak Penting</option>
+                  </select>
+                  </div>
+                </div><br><br>
+                 <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Status" value="Belum Terverifikasi" disabled>
                   </div>
                 </div>
               </div>
               <div class="box-footer">
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Pilih Aset</label>
+              	<div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Lokasi Aset</label>
 
                   <div class="col-sm-10">
                     <select class="form-control">
-                      <option>P001 - Laptop</option>
-                      <option>P002 - Komputer</option>
-                      <option>P003 - Router</option>
+                      <option>Lab Komputer</option>
+                      <option>Kelas 2A</option>
+                      <option>Kelas 3A</option>
                   </select>
                   </div>
                 </div><br><br>
-                  <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Jumlah Aset</label>
-
-                  <div class="col-sm-10">
-                    <input type="number" class="form-control" id="jumlah" value="10">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Jenis Aset</label>
+                 <div class="col-sm-10">
+                    <select class="form-control">
+                      <option>Laptop</option>
+                      <option>Komputer</option>
+                      <option>Router</option>
+                  </select>
                   </div>
                 </div><br><br>
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Total Harga</label>
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Nama Aset</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="harga" value="Rp. 14.000.000">
+                    <select class="form-control">
+                      <option>K001 - Komputer</option>
+                      <option>K002 - Komputer</option>
+                      <option>K003 - Komputer</option>
+                  </select>
                   </div>
-                </div>
+                </div><br><br>
+              	<div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Bukti Masalah</label>
+
+                  <div class="col-sm-10">
+                    <input type="file" id="exampleInputFile" name="bukti[]" multiple>
+                  </div>
+                </div><br><br>
+              	<div class="col-sm-4 text-center"> 
+    				<a href="index.html"><button type="submit" class="btn btn-success pull-left">Simpan</button></a> 
+				</div>
+				<div class="col-sm-4 text-center"> 
+    				<a href="#" data-toggle="modal" data-target="#modal-konfirmasi-no"><button type="submit" class="btn btn-danger">Hapus Laporan</button></a> 
+				</div>
+				<div class="col-sm-4 text-center"> 
+    				<a href="#" data-toggle="modal" data-target="#modal-konfirmasi-yes"><button type="submit" class="btn btn-primary pull-right">Tambah Aset</button></a> 
+				</div>  
               </div>  
             </div>
-                <a href=""><button type="submit" class="btn btn-primary pull-right">Tambah Barang</button></a><br><br>
                  <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>Nomor</th>
-                  <th>Jenis</th>
-                  <th>Jumlah</th>
-                  <th>Harga</th>
+                  <th>Lokasi Aset</th>
+                  <th>Jenis Aset</th>
+                  <th>Nama Aset</th>
                   <th></th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                   <td>1</td>
-                  <td>Laptop</td>
-                  <td>5</td>
-                  <td>Rp. 5.000.000</td>
-                  <td><a href="">Delete</a></td>
-                </tr>
-                 <tr>
-                  <td>2</td>
+                  <td>Lab Komputer</td>
                   <td>Komputer</td>
-                  <td>3</td>
-                  <td>Rp. 7.000.000</td>
+                  <td>K001 - Komputer</td>
                   <td><a href="">Delete</a></td>
                 </tr>
                  <tr>
-                  <td>3</td>
-                  <td>Router</td>
                   <td>2</td>
-                  <td>Rp. 2.000.000</td>
+                  <td>Lab Komputer</td>
+                  <td>Komputer</td>
+                  <td>K002 - Komputer</td>
                   <td><a href="">Delete</a></td>
-                </tr>
-                <tr>
-                  <td colspan="3"><b>Total Harga</b></td>
-                  <td colspan="2">Rp. 14.000.000</td>
                 </tr>
                 </tbody>
               </table>
-             </div>
-              <div class="modal-footer">
-                  <a href="index.html"><button type="submit" class="btn btn-success pull-right">Selesai</button></a>
-                  <a href="index.html"><button type="submit" class="btn btn-danger pull-left">Hapus Laporan</button></a>
-              </div>
+             </div>  
             </div>
             <!-- /.modal-content -->
           </div>
@@ -273,97 +275,126 @@
                   <label for="inputEmail3" class="col-sm-2 control-label" >Kode Laporan</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="PE001" disabled>
+                    <input type="text" class="form-control" id="inputEmail3" value="L001" disabled>
                   </div>
                 </div><br><br>
-               <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Pilih Vendor</label>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Deskripsi Masalah</label>
+
+                  <div class="col-sm-10">
+                   <textarea class="form-control" rows="2" placeholder="Deskripsi Masalah"></textarea>
+                  </div>
+                </div><br><br><br>
+                 <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Prioritas Laporan</label>
 
                   <div class="col-sm-10">
                     <select class="form-control">
-                      <option>Vendor 1</option>
-                      <option>Vendor 2</option>
-                      <option>Vendor 3</option>
+                      <option>Penting</option>
+                      <option>Tidak Penting</option>
                   </select>
                   </div>
                 </div>
               </div>
               <div class="box-footer">
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Pilih Aset</label>
+              	<div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Lokasi Aset</label>
 
                   <div class="col-sm-10">
                     <select class="form-control">
-                      <option>P001 - Laptop</option>
-                      <option>P002 - Komputer</option>
-                      <option>P003 - Router</option>
+                      <option>Lab Komputer</option>
+                      <option>Kelas 2A</option>
+                      <option>Kelas 3A</option>
                   </select>
                   </div>
                 </div><br><br>
-                  <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Jumlah</label>
-
-                  <div class="col-sm-10">
-                    <input type="number" class="form-control" id="jumlah" placeholder="Jumlah Aset Dipesan" >
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Jenis Aset</label>
+                 <div class="col-sm-10">
+                    <select class="form-control">
+                      <option>Laptop</option>
+                      <option>Komputer</option>
+                      <option>Router</option>
+                  </select>
                   </div>
                 </div><br><br>
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Harga</label>
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Nama Aset</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="harga" placeholder="Harga Aset (e.g : 5000000)" >
+                    <select class="form-control">
+                      <option>K001 - Komputer</option>
+                      <option>K002 - Komputer</option>
+                      <option>K003 - Komputer</option>
+                  </select>
                   </div>
                 </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Bukti Masalah</label>
+
+                  <div class="col-sm-10">
+                    <input type="file" name="bukti[]" multiple>
+                  </div>
+                </div><br><br>
+              	<div class="col-sm-4 text-center"> 
+    				<a href="index.html"><button type="submit" class="btn btn-success pull-left">Simpan</button></a> 
+				</div>
+				<div class="col-sm-4 text-center"> 
+    				 
+				</div>
+				<div class="col-sm-4 text-center"> 
+    				<a href="#" data-toggle="modal" data-target="#modal-konfirmasi-yes"><button type="submit" class="btn btn-primary pull-right">Tambah Aset</button></a> 
+				</div>
               </div>  
             </div>
-                <a href=""><button type="submit" class="btn btn-primary pull-right">Tambah Barang</button></a><br><br>
-                 <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Nomor</th>
-                  <th>Jenis</th>
-                  <th>Jumlah</th>
-                  <th>Harga</th>
-                  <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Laptop</td>
-                  <td>5</td>
-                  <td>Rp. 5.000.000</td>
-                  <td><a href="">Delete</a></td>
-                </tr>
-                 <tr>
-                  <td>2</td>
-                  <td>Komputer</td>
-                  <td>3</td>
-                  <td>Rp. 7.000.000</td>
-                  <td><a href="">Delete</a></td>
-                </tr>
-                 <tr>
-                  <td>3</td>
-                  <td>Router</td>
-                  <td>2</td>
-                  <td>Rp. 2.000.000</td>
-                  <td><a href="">Delete</a></td>
-                </tr>
-                <tr>
-                  <td colspan="3"><b>Total Harga</b></td>
-                  <td colspan="2">Rp. 14.000.000</td>
-                </tr>
-                </tbody>
-              </table>
              </div>
-              <div class="modal-footer">
-                  <a href="index.html"><button type="submit" class="btn btn-success pull-right">Selesai</button></a>
-              </div>
             </div>
             <!-- /.modal-content -->
           </div>
           <!-- /.modal-dialog -->
         </div>
+    <div id="modal-konfirmasi-no" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+  <div class="modal-content">
+ 
+   <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Konfirmasi</h4>
+   </div>
+ 
+   <div class="modal-body">
+    <b>Apakah Anda Yakin Ingin Menghapus Laporan Ini?</b>
+   </div>
+ 
+   <div class="modal-footer">
+     <a href="index.html"><button type="button" class="btn btn-danger">Ya</button></a>
+     <button type="button" class="btn btn-success" data-dismiss="modal">Tidak</button>
+   </div>
+ 
+  </div>
+ </div>
+</div>
+            <!-- modal konfirmasi-->
+<div id="modal-konfirmasi-yes" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+  <div class="modal-content">
+ 
+   <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Konfirmasi</h4>
+   </div>
+ 
+   <div class="modal-body">
+    <b>Apakah Data yang Diisi Sudah Benar?</b>
+   </div>
+ 
+   <div class="modal-footer">
+     <a href="index.html"><button type="button" class="btn btn-success">Ya</button></a>
+     <button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
+   </div>
+ 
+  </div>
+ </div>
   </section>
 
 
