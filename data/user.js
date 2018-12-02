@@ -23,7 +23,7 @@ var data = {
     },
     {
       username: 'penanggung@ui.ac.id',
-      name: 'Penanggung Jawab Ruangan',
+      name: 'PJ Ruangan',
       role: 'penanggung'
     }
   ]
