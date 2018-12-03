@@ -29,64 +29,62 @@
         </div>
         <div class="box-body">
           <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Kode Pengadaan</label>
+              <label for="inputEmail3" class="col-sm-2 control-label" >Kode Pengadaan</label>
 
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="PE001" disabled>
-                  </div>
-                </div><br><br>
-               <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Pilih Vendor</label>
-
-                  <div class="col-sm-10">
-                    <select class="form-control">
-                      <option>Vendor 1</option>
-                      <option>Vendor 2</option>
-                      <option>Vendor 3</option>
-                  </select>
-                  </div>
-                </div>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="insert1" value="" disabled>
               </div>
-              <div class="box-footer">
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Pilih Aset</label>
+            </div><br><br>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label" >Pilih Vendor</label>
 
-                  <div class="col-sm-10">
-                    <select class="form-control">
-                      <option>Laptop - P001</option>
-                      <option>Printer - P002</option>
-                      <option>Router - P003</option>
-                  </select>
-                  </div>
-                </div><br><br>
-                  <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Jumlah</label>
+              <div class="col-sm-10">
+                <select id="insert2" class="form-control">
+              </select>
+              </div>
+            </div>
+          </div>
+          <div class="box-footer">
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Pilih Aset</label>
 
-                  <div class="col-sm-10">
-                    <input type="number" class="form-control" id="jumlah" placeholder="Jumlah Aset Dipesan" >
-                  </div>
-                </div><br><br>
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Harga</label>
+              <div class="col-sm-10">
+                <select id="insert3" class="form-control">
+              </select>
+              </div>
+            </div><br><br>
+              <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label" >Jumlah</label>
 
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="harga" placeholder="Harga Aset (e.g : 5000000)" >
-                  </div>
-                </div><br><br>
-                <a href="#"><button type="submit" class="btn btn-primary pull-right">Tambah Barang</button></a>
-        </div>
+              <div class="col-sm-10">
+                <input type="number" class="form-control" id="insert4" placeholder="Jumlah Aset Dipesan" >
+              </div>
+            </div><br><br>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label" >Harga</label>
+
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="insert5" placeholder="Harga Aset (e.g : 5000000)" >
+              </div>
+            </div><br><br>
+            <button type="submit" id="addBtn" class="btn btn-primary pull-right">Tambah Barang</button>
+          </div>
         <!-- /.box-body -->
         <div class="box-footer">
           <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Nomor</th>
-                  <th>Jenis</th>
-                  <th>Jumlah</th>
-                  <th>Harga</th>
-                  <th></th>
-                </tr>
-                </thead>
+              <thead>
+              <tr>
+                <th>Nomor</th>
+                <th>Jenis</th>
+                <th>Jumlah</th>
+                <th>Harga</th>
+                <th>Total</th>
+                <th></th>
+              </tr>
+              </thead>
+              <tbody>
+                
+              </tbody>
             </table><br><br>
             <a href="#" data-toggle="modal" data-target="#modal-konfirmasi-yes"><button type="submit" class="btn btn-success pull-right" >Simpan</button></a>
         </div>
@@ -107,7 +105,8 @@
    </div>
  
    <div class="modal-footer">
-     <a href="pengadaan.html"><button type="button" class="btn btn-success">Ya</button></a>
+     <!-- <a href="pengadaan.html"><button type="button" class="btn btn-success">Ya</button></a> -->
+     <button id="submitBtn" type="button" class="btn btn-success">Ya</button>
      <button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
    </div>
  
@@ -130,22 +129,99 @@
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 <script>
   //date
+  var jumlah = 0
+  var total = 0
+  var grandTotal = 0
+  
   $('#datepicker').datepicker({
       autoclose: true
     })
+  
+  function loadVendor(data) {
+    $.each(data, function(index, item) {
+      $("#insert2").append(`
+        <option value=${item.namaVendor}>${item.namaVendor}</option>
+      `)
+    });
+  }
 
-  //table
-    $(function () {
-    $('#example1').DataTable()
-    $('#example2').DataTable({
-      'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : false
+  function loadPermintaanAset(data){
+    $("#insert3").html("")
+    $.each(data, function(index, item) {
+      if(item.status == 'Meminta Pengadaan'){
+        $("#insert3").append(`
+          <option>${item.jenisAset} - ${item.kode}</option>
+        `)
+      }
+    });
+  }
+
+  function loadPermintaanItem(data) {
+    $("#example1 tbody").html("")
+
+    $.each(data, function(index, item) {
+      jumlah += item.jumlah
+      total += item.harga
+      grandTotal += (item.jumlah * item.harga)
+      $("#example1 tbody").append(`<tr>
+        <td>${index + 1}</td>
+        <td>${item.jenis}</td>
+        <td>${item.jumlah}</td>
+        <td>Rp ${numeral(item.harga).format('0,0')}</td>
+        <td>Rp ${numeral(item.jumlah * item.harga).format('0,0')}</td>
+        <td><a href="#" data-toggle="modal" data-target="#modal-detail" class="openDetail" data-item=${(item.kode)}>Delete</a></td>
+      </tr>`)
+    });
+
+    $("#example1 tbody").append(`<tr>
+        <td colspan='4'>Grand Total </td>
+        <td colspan='2'><b>Rp ${numeral(grandTotal).format('0,0')}</b></td>
+      </tr>`)
+  }
+  
+  $(function () {
+    var pengadaan_aset = JSON.parse(localStorage.getItem("pengadaan_aset"))
+    var permintaan_aset = JSON.parse(localStorage.getItem("permintaan_aset"))
+    var vendors = JSON.parse(localStorage.getItem("vendors"))
+
+    loadPermintaanAset(permintaan_aset)
+    loadVendor(vendors)
+    
+    var random = Math.floor(Math.random() * 100) + 1; 
+    $("#insert1").val("PE00" + random)
+
+    var lists = []
+    $("#addBtn").click(function() {
+
+      var newData = {
+        jenis: $("#insert3").val(),
+        jumlah: $("#insert4").val(),
+        harga: $("#insert5").val()
+      }
+      
+      lists.push(newData)
+      loadPermintaanItem(lists)
+    })
+
+    $("#submitBtn").click(function() {
+      var newPengadaan = 
+      {
+        kode: $("#insert1").val(),
+        tanggalApproval: '11/20/2018',
+        vendor: $("#insert2").val(),
+        jumlah: jumlah,
+        total: grandTotal,
+        status: 'Diproses',
+        lists: lists
+      }
+      
+      pengadaan_aset.push(newPengadaan)
+      localStorage.setItem("pengadaan_aset", JSON.stringify(pengadaan_aset));
+      window.location = "pengadaan.html"
     })
   })
 </script>

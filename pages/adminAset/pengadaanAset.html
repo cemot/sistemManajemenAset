@@ -566,7 +566,7 @@
         permintaan_aset.splice(index, 1, detail);
         loadTable(permintaan_aset)
         localStorage.setItem("permintaan_aset", JSON.stringify(permintaan_aset));
-        $('#modal-konfirmasi-yes, #modal-edit').modal('toggle');
+        $('#modal-konfirmasi-yes, #modal-edit').modal('hide');
       }
       else if( edit == 0) { 
         var newData = {
@@ -584,7 +584,7 @@
         permintaan_aset.push(newData)
         loadTable(permintaan_aset)
         localStorage.setItem("permintaan_aset", JSON.stringify(permintaan_aset));
-        $('#modal-konfirmasi-yes, #modal-tambah').modal('toggle');
+        $('#modal-konfirmasi-yes, #modal-tambah').modal('hide');
       }
     })
 
@@ -595,7 +595,7 @@
       permintaan_aset.splice(index, 1);
       loadTable(permintaan_aset)
       localStorage.setItem("permintaan_aset", JSON.stringify(permintaan_aset));
-      $('#modal-konfirmasi-no, #modal-edit').modal('toggle');
+      $('#modal-konfirmasi-no, #modal-edit').modal('hide');
     })
 
     $("#addBtn").click(function(){

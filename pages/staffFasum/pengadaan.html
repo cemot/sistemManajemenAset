@@ -110,24 +110,7 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Laptop</td>
-                    <td>5</td>
-                    <td>Rp. 5.000.000</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Printer</td>
-                    <td>3</td>
-                    <td>Rp. 7.000.000</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Router</td>
-                    <td>2</td>
-                    <td>Rp. 2.000.000</td>
-                  </tr>
+                    
                   </tbody>
               </table>
              </div>
@@ -223,31 +206,7 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Laptop</td>
-                    <td>5</td>
-                    <td>Rp. 5.000.000</td>
-                    <td><a href="">Delete</a></td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Printer</td>
-                    <td>3</td>
-                    <td>Rp. 7.000.000</td>
-                    <td><a href="">Delete</a></td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Router</td>
-                    <td>2</td>
-                    <td>Rp. 2.000.000</td>
-                    <td><a href="">Delete</a></td>
-                  </tr>
-                  <tr>
-                    <td colspan="3"><b>Total Harga</b></td>
-                    <td colspan="2">Rp. 14.000.000</td>
-                  </tr>
+                 
                   </tbody>
                 </table>
              </div>
@@ -356,6 +315,18 @@
     })
   }
 
+  function loadEditTable(data) {
+    $("#editTable tbody").html("")
+    $.each(data, function(index, item) {
+        $("#editTable tbody").append(`<tr>
+          <td>${index + 1}</td>
+          <td>${item.jenis}</td>
+          <td>${item.jumlah}</td>
+          <td>Rp ${numeral(item.harga).format('0,0')}</td>
+        </tr>`)
+    })
+  }
+
   function loadAset(data) {
     $.each(data, function(index, item) {
       $("#insert2").append(`
@@ -379,6 +350,17 @@
       $("#detail5").val(detail.total)
       $("#detail6").val(detail.status)
       loadDetailTable(detail.lists)
+    })
+
+    $(".openEdit").click(function(){
+      var detail = _.find(pengadaan_aset, { kode:  $(this).data("item")});
+      $("#edit1").val(detail.kode)
+      $("#edit2").val(detail.tanggalApproval)
+      $("#edit3").val(detail.vendor)
+      $("#edit4").val(detail.jumlah)
+      $("#edit5").val(detail.total)
+      $("#edit6").val(detail.status)
+      loadEditTable(detail.lists)
     })
   })
 </script>

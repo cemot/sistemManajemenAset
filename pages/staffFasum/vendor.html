@@ -29,39 +29,24 @@
         </div>
         <div class="box-body">
           <table id="example1" class="table table-bordered table-striped">
-            <thead>
-            <tr>
-              <th>Kode</th>
-              <th>Nama</th>
-              <th>Alamat</th>
-              <th>Deskripsi</th>
-              <th></th>
-              <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <td>V001</td>
-              <td>Vendor 1</td>
-              <td>Ciracas, Jakarta Timur</td>
-              <td>Menjual Perlengkapan Untuk Komputer</td>
-              <td><a href="#" data-toggle="modal" data-target="#modal-detail">Detail</a></td>
-              <td><a href="#" data-toggle="modal" data-target="#modal-edit">Edit</a></td>
-            </tr>
-              <tr>
-              <td>V002</td>
-              <td>Vendor 2</td>
-              <td>Salemba, Jakarta Pusat</td>
-              <td>Menjual Perlengkapan Untuk Laptop</td>
-              <td><a href="#" data-toggle="modal" data-target="#modal-detail">Detail</a></td>
-              <td><a href="#" data-toggle="modal" data-target="#modal-edit">Edit</a></td>
-            </tr>
-            </tbody>
-          </table>
+                <thead>
+                <tr>
+                  <th>Kode</th>
+                  <th>Nama</th>
+                  <th>Alamat</th>
+                  <th>Deskripsi</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                </tbody>
+              </table>
         </div>
         <!-- /.box-body -->
         <div class="box-footer">
-            <a href="#" data-toggle="modal" data-target="#modal-tambah"><button type="submit" class="btn btn-success pull-right">Tambah Vendor</button></a>
+            <a href="#" data-toggle="modal" id="tambahBtn" data-target="#modal-tambah"><button type="submit" class="btn btn-success pull-right">Tambah Vendor</button></a>
         </div>
         <!-- /.box-footer-->
       </div>
@@ -254,78 +239,70 @@
                   <label for="inputEmail3" class="col-sm-2 control-label" >Kode Vendor</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="V001" disabled>
+                    <input type="text" class="form-control" id="insert1" value="" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Nama Vendor</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="Nama Vendor">
+                    <input type="text" class="form-control" id="insert2" placeholder="Nama Vendor">
                   </div>
                 </div><br><br>
                   <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Nama PIC</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="jumlah" placeholder="Nama PIC">
+                    <input type="text" class="form-control" id="insert3" placeholder="Nama PIC">
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Email PIC</label>
 
                   <div class="col-sm-10">
-<<<<<<< HEAD
-                    <select class="form-control">
-                      <option>P001 - Laptop</option>
-                      <option>P002 - Komputer</option>
-                      <option>P003 - Router</option>
-                    </select>
-=======
-                    <input type="Email" class="form-control" id="harga" placeholder="Email PIC">
->>>>>>> 6a4b4d0a078dc79197421756da13d3b47c366897
+                    <input type="Email" class="form-control" id="insert4" placeholder="Email PIC">
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Kontak PIC</label>
 
                   <div class="col-sm-10">
-                    <input type="Email" class="form-control" id="harga" placeholder="Nomer HP PIC">
+                    <input type="Email" class="form-control" id="insert5" placeholder="Nomer HP PIC">
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Alamat</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Status" placeholder="Alamat Vendor">
+                    <input type="text" class="form-control" id="insert6" placeholder="Alamat Vendor">
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Email Vendor</label>
 
                   <div class="col-sm-10">
-                    <input type="Email" class="form-control" id="harga" placeholder="Email Vendor">
+                    <input type="Email" class="form-control" id="insert7" placeholder="Email Vendor">
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Kontak Perusahaan</label>
 
                   <div class="col-sm-10">
-                    <input type="Email" class="form-control" id="harga" placeholder="Nomer Telepon Perusahaan">
+                    <input type="Email" class="form-control" id="insert8" placeholder="Nomer Telepon Perusahaan">
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Web Perusahaan</label>
 
                   <div class="col-sm-10">
-                    <input type="Email" class="form-control" id="harga" placeholder="Web Perusahaan">
+                    <input type="Email" class="form-control" id="insert9" placeholder="Web Perusahaan">
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Deskripsi</label>
 
                   <div class="col-sm-10">
-                   <textarea class="form-control" placeholder="Deskripsi Vendor"></textarea>
+                   <textarea class="form-control" id="insert10" placeholder="Deskripsi Vendor"></textarea>
                   </div>
                 </div><br><br> 
              </div>
@@ -373,7 +350,7 @@
    </div>
  
    <div class="modal-footer">
-     <a href="vendor.html"><button type="button" class="btn btn-success">Ya</button></a>
+     <button type="button" id="submitBtn" class="btn btn-success">Ya</button>
      <button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
    </div>
  
@@ -400,15 +377,47 @@
 <script src="../../dist/js/demo.js"></script>
 <script>
   //table
-    $(function () {
-      $('#example1').DataTable()
-      $('#example2').DataTable({
-        'paging'      : true,
-        'lengthChange': false,
-        'searching'   : false,
-        'ordering'    : true,
-        'info'        : true,
-        'autoWidth'   : false
-      })
+  function loadVendor(data) {
+    $("#example1 tbody").html("")
+    $.each(data, function(index, item) {
+        $("#example1 tbody").append(`<tr>
+          <td>${item.kode}</td>
+          <td>${item.namaVendor}</td>
+          <td>${item.alamat}</td>
+          <td>${item.desc}</td>
+          <td><a href="#" data-toggle="modal" data-target="#modal-detail" class="openDetail" data-item=${(item.kode)}>Detail</a></td>
+          <td><a href="#" data-toggle="modal" data-target="#modal-edit" class="openEdit" data-item=${(item.kode)}>Edit</a></td>
+        </tr>`)
     })
+  }
+    
+  $(function () {
+    var vendors = JSON.parse(localStorage.getItem("vendors"))
+    loadVendor(vendors)
+
+    $("#tambahBtn").click(function() {
+      var random = Math.floor(Math.random() * 100) + 1; 
+      $("#insert1").val("V00" + random)
+    })
+
+    $("#submitBtn").click(function() {
+      var newVendor = {
+        kode: $("#insert1").val(),
+        namaVendor: $("#insert2").val(),
+        namaPic: $("#insert3").val(),
+        emailPic: $("#insert4").val(),
+        kontakPic: $("#insert5").val(),
+        alamat: $("#insert6").val(),
+        email: $("#insert7").val(),
+        kontak: $("#insert8").val(),
+        web: $("#insert9").val(),
+        desc: $("#insert10").val()
+      }
+
+      vendors.push(newVendor)
+      loadVendor(vendors)
+      localStorage.setItem("vendors", JSON.stringify(vendors));
+      $('#modal-tambah, #modal-konfirmasi-yes').modal('hide');
+    })
+  })
 </script>

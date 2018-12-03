@@ -197,7 +197,7 @@ var data = {
       tanggalApproval: '11/20/2018',
       vendor: 'Vendor 1',
       jumlah: '12',
-      total: '14000000',
+      total: '2100000',
       status: 'Selesai',
       lists: [
         {
@@ -222,25 +222,46 @@ var data = {
       tanggalApproval: '11/21/2018',
       vendor: 'Vendor 2',
       jumlah: '12',
-      total: '14000000',
+      total: '16000000',
       status: 'Selesai',
       lists: [
         {
           jenis: 'Laptop',
-          jumlah: '4',
-          harga: '14000000'
+          jumlah: '12',
+          harga: '1000000'
         },
         {
           jenis: 'Mouse',
-          jumlah: '5',
-          harga: '120000'
-        },
-        {
-          jenis: 'Keyboard',
-          jumlah: '1',
+          jumlah: '9',
           harga: '120000'
         },
       ]
+    },
+  ],
+  vendors: [
+    {
+      kode: 'V001',
+      namaVendor: 'Vendor 1',
+      namaPic: 'Agus',
+      emailPic: 'agus@vendor.com',
+      kontakPic: '081294919283',
+      alamat: 'Salemba, Jakarta Pusat',
+      email: 'vendor@gmail.com',
+      kontak: '021341235',
+      web: 'vendor-satu.com',
+      desc: 'Menjual Perlengkapan Komputer'
+    },
+    {
+      kode: 'V002',
+      namaVendor: 'Vendor 2',
+      namaPic: 'Johan',
+      emailPic: 'johan@vendor.com',
+      kontakPic: '081294213421',
+      alamat: 'Salemba, Jakarta Pusat',
+      email: 'vendor-2@gmail.com',
+      kontak: '0210491925',
+      web: 'vendor-dua.com',
+      desc: 'Menjual Aneka Software'
     },
   ]
 }
