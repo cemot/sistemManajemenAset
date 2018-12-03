@@ -33,7 +33,7 @@ var data = {
       kode: 'A00001',
       jenis: 'Laptop',
       brand: 'Asus',
-      prioritas: 1,
+      prioritas: 'High',
       total: 12,
       kategori: 'Hardware'
     },
@@ -41,7 +41,7 @@ var data = {
       kode: 'A00002',
       jenis: 'Keyboard',
       brand: 'Logitec',
-      prioritas: 2,
+      prioritas: 'Medium',
       total: 80,
       kategori: 'Hardware'
     },
@@ -49,7 +49,7 @@ var data = {
       kode: 'A00003',
       jenis: 'Komputer',
       brand: 'Logitec',
-      prioritas: 2,
+      prioritas: 'Critical',
       total: 80,
       kategori: 'Hardware'
     },
@@ -151,7 +151,7 @@ var data = {
       brand: 'IBM',
       jumlah: '5',
       tanggalPermohonan: '11/8/2018',
-      tanggalApproval: '18/8/2018',
+      tanggalApproval: '11/8/2018',
       prioritas: 'High',
       status: 'Diproses',
       desc: ''
@@ -173,7 +173,7 @@ var data = {
       brand: 'IBM',
       jumlah: 'Pending',
       tanggalPermohonan: '11/8/2018',
-      tanggalApproval: '18/8/2018',
+      tanggalApproval: '11/8/2018',
       prioritas: 'High',
       status: '2',
       desc: 'Tidak Sesuai RAB'
@@ -263,5 +263,33 @@ var data = {
       web: 'vendor-dua.com',
       desc: 'Menjual Aneka Software'
     },  
+  ],
+  laporan: [
+    {
+      kode: 'L0001',
+      desc: 'Komputer tidak bisa menyala',
+      prioritas: 'Penting',
+      status: 'Belum Terverifikasi',
+      staff: '',
+      tanggalApproval: '',
+      tanggalPerbaikan: '',
+      tanggalSelesai: '',
+      biaya: '',
+      caraPenyelesaian: '',
+      lists: [
+        {
+          lokasiAset:'Lab Komputer 1',
+          jenisAset: 'Laptop',
+          namaAset: 'K001 - Komputer',
+          file: 'file.jpg',
+        },
+        {
+          lokasiAset:'Lab Komputer 2',
+          jenisAset: 'Laptop',
+          namaAset: 'K002 - Komputer',
+          file: 'file.jpg',
+        }
+      ]
+    }
   ]
 }

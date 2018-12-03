@@ -128,7 +128,7 @@
                     <select class="form-control selectAset" id="select_0">
                     </select>
                     </div>
-                  </div><br><br>
+                  </div><br>
                   
                 <div class="form-group">
                   <label for="jumlah" class="col-sm-2 control-label">Jumlah</label>
@@ -136,7 +136,14 @@
                   <div class="col-sm-10">
                     <input type="number" class="form-control" id="input_0" placeholder="Jumlah Aset" >
                   </div>
-                </div><br><br>
+                </div><br>
+                <div class="form-group">
+                    <label for="jumlah" class="col-sm-2 control-label">Harga</label>
+  
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" id="harga_0" placeholder="Harga Aset" >
+                    </div>
+                  </div><br><br>
               </div>
              </div>
              </div>
@@ -200,7 +207,7 @@
    </div>
  
    <div class="modal-footer">
-     <a href="tambahPengadaan.html"><button type="button" class="btn btn-success">Ya</button></a>
+     <button id="submitBtn" type="button" class="btn btn-success">Ya</button>
      <button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
    </div>
  
@@ -282,6 +289,7 @@
 
 
   $(document).ready(function () {
+    localStorage.setItem("tmp", "");
     var permintaan_aset = JSON.parse(localStorage.getItem("permintaan_aset"))
     loadTable(permintaan_aset)
     loadPermintaan(permintaan_aset)
@@ -296,7 +304,7 @@
       $("#detail6").val(detail.status)
     })
 
-      var next = 0;
+    var next = 0;
     $("#add-more").click(function(e){
         e.preventDefault();
         var addto = "#field" + next;
@@ -304,11 +312,13 @@
         next = next + 1;
         var newIn = '<div id="field'+ next +'" name="field'+ next +'">'+ 
                     '<div class="form-group"><label for="jenis" class="col-sm-2 control-label">Jenis</label><div class="col-sm-10">'+
-                    '<select id="select_'+ next +'" class="form-control selectAset"></select></div></div><br><br>'+
+                    '<select id="select_'+ next +'" class="form-control selectAset"></select></div></div><br>'+
                     '<div class="form-group"><label for="jumlah" class="col-sm-2 control-label">Jumlah</label>'+
-                    '<div class="col-sm-10"><input id="input_'+ next+'" type="number" class="form-control" placeholder="Jumlah Aset"></div></div><br><br></div>';
+                    '<div class="col-sm-10"><input id="input_'+ next+'" type="number" class="form-control" placeholder="Jumlah Aset"></div><br>' + 
+                    '<div class="form-group"><label for="jumlah" class="col-sm-2 control-label">Harga</label>'+
+                    '<div class="col-sm-10"><input id="harga_'+ next+'" type="number" class="form-control" placeholder="Jumlah Aset"></div></div></div><br><br>';
         var newInput = $(newIn);
-        var removeBtn = '<button id="remove' +next+ '" class="btn btn-danger remove-me pull-right"><i class="fa fa-minus"></i></button></div></div><div id="field"><br><br>';
+        var removeBtn = '<button id="remove' +next+ '" class="btn btn-danger remove-me pull-right"><i class="fa fa-minus"></i></button></div></div><div id="field"><br>';
         var removeButton = $(removeBtn);
         $(addto).after(newInput);
         $(addRemove).after(removeButton);
@@ -323,9 +333,28 @@
             $(this).remove();
             $(fieldID).remove();
         });
-        
+
         loadPermintaan(permintaan_aset)
     });
+
+    $("#submitBtn").click(function() {
+      var lists = []
+      for(var i = 0; i <= next; i ++){
+        lists.push({
+          jenis: $("#select_" + i).val(),
+          jumlah: $("#input_" + i).val(),
+          harga: $("#harga_" + i).val(),
+        })
+      }
+      
+      var tmpPengadaan = {
+        tanggalApproval: $("datepicker").val(),
+        lists: lists
+      }
+
+      localStorage.setItem("tmp", JSON.stringify(tmpPengadaan));
+      window.location = "tambahPengadaan.html"
+    })
 
   });
   </script>

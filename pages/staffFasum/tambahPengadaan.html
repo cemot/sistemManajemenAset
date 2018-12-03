@@ -184,9 +184,19 @@
   }
   
   $(function () {
+    var lists = []
+    var tanggalApproval = '12/20/2018'
     var pengadaan_aset = JSON.parse(localStorage.getItem("pengadaan_aset"))
     var permintaan_aset = JSON.parse(localStorage.getItem("permintaan_aset"))
     var vendors = JSON.parse(localStorage.getItem("vendors"))
+    var tmp = localStorage.getItem("tmp")
+    if(tmp != ''){
+      tmp = JSON.parse(tmp)
+      lists = tmp.lists
+      tanggalApproval = tmp.tanggalApproval
+      loadPermintaanItem(lists)
+    }
+      
 
     loadPermintaanAset(permintaan_aset)
     loadVendor(vendors)
@@ -194,9 +204,8 @@
     var random = Math.floor(Math.random() * 100) + 1; 
     $("#insert1").val("PE00" + random)
 
-    var lists = []
+    
     $("#addBtn").click(function() {
-
       var newData = {
         jenis: $("#insert3").val(),
         jumlah: $("#insert4").val(),
@@ -211,7 +220,7 @@
       var newPengadaan = 
       {
         kode: $("#insert1").val(),
-        tanggalApproval: '11/20/2018',
+        tanggalApproval: tanggalApproval,
         vendor: $("#insert2").val(),
         jumlah: jumlah,
         total: grandTotal,
