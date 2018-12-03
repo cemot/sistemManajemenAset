@@ -162,12 +162,15 @@
       }
       else if(user.role == 'helpdesk'){
         menu +=`<li data-menu="helpdesk/index.html" class="active"><a><i class="fa fa-home"></i> <span>Laporan</span></a></li>`
+        $("#mainContent").attr("src", "./helpdesk/index.html")
       }
       else if(user.role == 'penanggung'){
         menu +=`<li data-menu="pjRuangan/index.html" class="active"><a><i class="fa fa-home"></i> <span>Laporan</span></a></li>`
+        $("#mainContent").attr("src", ".pjRuangan/index.html")
       }
       else if(user.role == 'pemelihara'){
         menu +=`<li data-menu="pemeliharaAset/index.html" class="active"><a><i class="fa fa-home"></i> <span>Pelaporan Aset</span></a></li>`
+        $("#mainContent").attr("src", ".pemeliharaAset/index.html")
       }
 
       menu += `<li class="header">LABELS</li><li><a href="login.html"><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>`

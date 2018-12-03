@@ -39,33 +39,26 @@
                 </thead>
                 <tbody>
                 <tr>
-                  <td>P001</td>
-                  <td>Laptop</td>
-                  <td>12</td>
-                  <td>High</td>
-                  <td><a href="#" data-toggle="modal" data-target="#modal-detail">Detail</a></td>
-                  <td><a href="#" data-toggle="modal" data-target="#modal-edit">Edit</a></td>
-                </tr>
-                 <tr>
-                  <td>P002</td>
-                  <td>Printer</td>
-                  <td>10</td>
-                  <td>Medium</td>
-                  <td><a href="#" data-toggle="modal" data-target="#modal-detail">Detail</a></td>
-                  <td><a href="#" data-toggle="modal" data-target="#modal-edit">Edit</a></td>
-                </tr>
-                 <tr>
-                  <td>P003</td>
-                  <td>Router</td>
-                  <td>7</td>
-                  <td>Critical</td>
-                  <td><a href="#" data-toggle="modal" data-target="#modal-detail">Detail</a></td>
-                  <td><a href="#" data-toggle="modal" data-target="#modal-edit">Edit</a></td>
                 </tr>
                 </tbody>
          </table>
               </div>
               <div class="tab-pane" id="diproses">
+                <table id="example2" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Kode</th>
+                  <th>Jenis</th>
+                  <th>Jumlah</th>
+                  <th>Prioritas</th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+         </table>
+              </div>
+              <div class="tab-pane" id="selesai">
                 <table id="example3" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -77,24 +70,11 @@
                 </tr>
                 </thead>
                 <tbody>
-                 <tr>
-                  <td>P005</td>
-                  <td>Printer</td>
-                  <td>5</td>
-                  <td>Medium</td>
-                  <td><a href="#" data-toggle="modal" data-target="#modal-detail">Detail</a></td>
-                </tr>
-                 <tr>
-                  <td>P006</td>
-                  <td>Router</td>
-                  <td>8</td>
-                  <td>Critical</td>
-                  <td><a href="#" data-toggle="modal" data-target="#modal-detail">Detail</a></td>
-                </tr>
+                 
                 </tbody>
          </table>
               </div>
-              <div class="tab-pane" id="selesai">
+              <div class="tab-pane" id="ditolak">
                 <table id="example4" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -106,44 +86,16 @@
                 </tr>
                 </thead>
                 <tbody>
-                 <tr>
-                  <td>P007</td>
-                  <td>Router</td>
-                  <td>3</td>
-                  <td>Critical</td>
-                  <td><a href="#" data-toggle="modal" data-target="#modal-detail">Detail</a></td>
-                </tr>
-                </tbody>
-         </table>
-              </div>
-              <div class="tab-pane" id="ditolak">
-                <table id="example5" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Kode</th>
-                  <th>Jenis</th>
-                  <th>Jumlah</th>
-                  <th>Prioritas</th>
-                  <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                 <tr>
-                  <td>P004</td>
-                  <td>Keyboard</td>
-                  <td>15</td>
-                  <td>Low</td>
-                  <td><a href="#" data-toggle="modal" data-target="#modal-detailtolak">Detail</a></td>
-                </tr>
+                 
                 </tbody>
          </table>
               </div>
               <!-- /#ion-icons -->
 
             </div>
-            <!-- /.tab-content -->
+            <br>
+            <a href="#" data-toggle="modal" id="addBtn" data-target="#modal-tambah"><button type="submit" class="btn btn-success pull-right">Tambah Permintaan</button></a>
           </div>
-           <br><br><a href="#" data-toggle="modal" data-target="#modal-tambah"><button type="submit" class="btn btn-success pull-right">Tambah Permintaan</button></a>
       </div>
       <div class="modal fade" id="modal-detail">
           <div class="modal-dialog">
@@ -158,56 +110,56 @@
                   <label for="inputEmail3" class="col-sm-2 control-label" >Kode</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="P001" disabled>
+                    <input type="text" class="form-control" id="detail1" value="P001" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Jenis Aset</label>
 
                   <div class="col-sm-10">
-                   <input type="text" class="form-control" id="inputEmail3" value="Laptop" disabled>
+                   <input type="text" class="form-control" id="detail2" value="Laptop" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Brand</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="IBM" disabled>
+                    <input type="text" class="form-control" id="detail3" value="IBM" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Jumlah</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="12" disabled>
+                    <input type="text" class="form-control" id="detail4" value="12" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Tanggal Permohonan</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="11/8/2018" disabled>
+                    <input type="text" class="form-control" id="detail5" value="11/8/2018" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Tanggal Approval</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="" disabled>
+                    <input type="text" class="form-control" id="detail6" value="" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Prioritas</label>
                   
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Status" value="High" disabled>
+                    <input type="text" class="form-control" id="detail7" value="High" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
                   
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Status" value="Meminta Pengadaan" disabled>
+                    <input type="text" class="form-control" id="detail8" value="Meminta Pengadaan" disabled>
                   </div>
                 </div>
               </div>
@@ -231,49 +183,49 @@
                   <label for="inputEmail3" class="col-sm-2 control-label" >Kode</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="P004" disabled>
+                    <input type="text" class="form-control" id="tolak1" value="" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Jenis Aset</label>
 
                   <div class="col-sm-10">
-                   <input type="text" class="form-control" id="inputEmail3" value="Laptop" disabled>
+                   <input type="text" class="form-control" id="tolak2" value="" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Brand</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="IBM" disabled>
+                    <input type="text" class="form-control" id="tolak3" value="" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Jumlah</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="12" disabled>
+                    <input type="text" class="form-control" id="tolak4" value="" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Tanggal Permohonan</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="11/8/2018" disabled>
+                    <input type="text" class="form-control" id="tolak5" value="" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
                   
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Status" value="Ditolak" disabled>
+                    <input type="text" class="form-control" id="tolak6" value="" disabled>
                   </div>
                 </div><br><br>
                  <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Deskripsi</label>
                   
                   <div class="col-sm-10">
-                    <textarea class="form-control" disabled>Tidak sesuai dengan RIB</textarea>
+                    <textarea class="form-control" id="tolak7" disabled>Tidak sesuai dengan RIB</textarea>
                   </div>
                 </div>
               </div>
@@ -297,17 +249,14 @@
                   <label for="inputEmail3" class="col-sm-2 control-label" >Kode</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="P001" disabled>
+                    <input type="text" class="form-control" id="edit1" value="" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Jenis Aset</label>
 
                   <div class="col-sm-10">
-                    <select class="form-control">
-                      <option>Laptop - P001</option>
-                      <option>Printer - P002</option>
-                      <option>Router - P003</option>
+                    <select id="edit2" class="form-control">
                   </select>
                   </div>
                 </div><br><br>
@@ -315,28 +264,28 @@
                   <label for="inputEmail3" class="col-sm-2 control-label" >Brand</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="IBM">
+                    <input type="text" class="form-control" id="edit3" value="">
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Jumlah</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="12">
+                    <input type="text" class="form-control" id="edit4" value="">
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Tanggal Permohonan</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="11/8/2018" disabled>
+                    <input type="text" class="form-control" id="edit5" value="" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Prioritas</label>
 
                   <div class="col-sm-10">
-                    <select class="form-control">
+                    <select id="edit6" class="form-control">
                       <option>High</option>
                       <option>Critical</option>
                       <option>Medium</option>
@@ -348,14 +297,14 @@
                   <label for="inputEmail3" class="col-sm-2 control-label" >Tanggal Approval</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="" disabled>
+                    <input type="text" class="form-control" id="edit7" value="" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
                   
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Status" value="Meminta Pengadaan" disabled>
+                    <input type="text" class="form-control" id="edit8" value="Meminta Pengadaan" disabled>
                   </div>
                 </div>
               </div>
@@ -381,39 +330,36 @@
                   <label for="inputEmail3" class="col-sm-2 control-label" >Kode</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" value="P008" disabled>
+                    <input type="text" class="form-control" id="insert1" value="" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Jenis Aset</label>
 
                   <div class="col-sm-10">
-                    <select class="form-control">
-                      <option>Laptop - P001</option>
-                      <option>Printer - P002</option>
-                      <option>Router - P003</option>
-                  </select>
+                    <select id="insert2" class="form-control">
+                    </select>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Brand</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="Brand Aset">
+                    <input type="text" class="form-control" id="insert3" placeholder="Brand Aset">
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Jumlah</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="jumlah aset">
+                    <input type="text" class="form-control" id="insert4" placeholder="jumlah aset">
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Prioritas</label>
 
                   <div class="col-sm-10">
-                    <select class="form-control">
+                    <select id="insert5" class="form-control">
                       <option>Critical</option>
                       <option>High</option>
                       <option>Medium</option>
@@ -425,7 +371,7 @@
                   <label for="inputEmail3" class="col-sm-2 control-label" >Tanggal Permohonan</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="datepicker" placeholder="Tanggal Permohonan">
+                    <input type="text" class="form-control" id="insert6" placeholder="Tanggal Permohonan">
                   </div>
                 </div><br><br>
               </div>
@@ -451,7 +397,7 @@
    </div>
  
    <div class="modal-footer">
-     <a href="pengadaanAset.html"><button type="button" class="btn btn-danger">Ya</button></a>
+     <button id="deleteBtn" type="button" class="btn btn-danger">Ya</button>
      <button type="button" class="btn btn-success" data-dismiss="modal">Tidak</button>
    </div>
  
@@ -473,8 +419,8 @@
    </div>
  
    <div class="modal-footer">
-     <a href="pengadaanAset.html"><button type="button" class="btn btn-success">Ya</button></a>
-     <button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
+      <button id="editBtn" type="button" class="btn btn-success">Ya</button>
+      <button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
    </div>
  
   </div>
@@ -498,58 +444,166 @@
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+
 <script>
   //date
-  $('#datepicker').datepicker({
+  function loadTable(data) {
+    $("#pengadaan tbody,#diproses tbody,#selesai tbody, #ditolak tbody").html("")
+    $.each(data, function(index, item) {
+      if(item.status == 'Meminta Pengadaan'){
+        $("#pengadaan tbody").append(`<tr>
+          <td>${item.kode}</td>
+          <td>${item.jenisAset}</td>
+          <td>${item.jumlah}</td>
+          <td>${item.prioritas}</td>
+          <td><a href="#" data-toggle="modal" data-target="#modal-detail" class="openDetail" data-item=${(item.kode)}>Detail</a></td>
+          <td><a href="#" data-toggle="modal" data-target="#modal-edit" class="openEdit" data-item=${(item.kode)}>Edit</a></td>
+        </tr>`)
+      }
+      else if(item.status == 'Diproses'){
+        $("#diproses tbody").append(`<tr>
+          <td>${item.kode}</td>
+          <td>${item.jenisAset}</td>
+          <td>${item.jumlah}</td>
+          <td>${item.prioritas}</td>
+          <td><a href="#" data-toggle="modal" data-target="#modal-detail" class="openDetail" data-item=${(item.kode)}>Detail</a></td>
+        </tr>`)
+      }
+      else if(item.status == 'Selesai'){
+        $("#selesai tbody").append(`<tr>
+          <td>${item.kode}</td>
+          <td>${item.jenisAset}</td>
+          <td>${item.jumlah}</td>
+          <td>${item.prioritas}</td>
+          <td><a href="#" data-toggle="modal" data-target="#modal-detail" class="openDetail" data-item=${(item.kode)}>Detail</a></td>
+        </tr>`)
+      }
+      else if(item.status == 'Ditolak'){
+        $("#ditolak tbody").append(`<tr>
+          <td>${item.kode}</td>
+          <td>${item.jenisAset}</td>
+          <td>${item.jumlah}</td>
+          <td>${item.prioritas}</td>
+          <td><a href="#" data-toggle="modal" data-target="#modal-detailtolak" class="openDetailTolak" data-item=${(item.kode)}>Detail</a></td>
+        </tr>`)
+      }
+      
+    });
+
+    $('#example1, #example2, #example3, #example4').DataTable()
+  }
+
+  function loadAset(data) {
+    $.each(data, function(index, item) {
+      $("#insert2, #edit2").append(`
+        <option value=${item.nama}>${item.nama}</option>
+      `)
+    });
+  }
+
+  $('#insert6').datepicker({
       autoclose: true
-    })
+  })
   
   //table
-    $(function () {
-    $('#example1').DataTable()
-    $('#example2').DataTable({
-      'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : false
+  $(function () {
+    var asets = JSON.parse(localStorage.getItem("asets"))
+    var permintaan_aset = JSON.parse(localStorage.getItem("permintaan_aset"))
+    loadTable(permintaan_aset)
+    loadAset(asets)
+    
+    var edit;
+
+    $(".openDetail").click(function(){
+      var detail = _.find(permintaan_aset, { kode:  $(this).data("item")});
+      $("#detail1").val(detail.kode)
+      $("#detail2").val(detail.jenisAset)
+      $("#detail3").val(detail.brand)
+      $("#detail4").val(detail.jumlah)
+      $("#detail5").val(detail.tanggalPermohonan)
+      $("#detail6").val(detail.tanggalApproval)
+      $("#detail7").val(detail.prioritas)
+      $("#detail8").val(detail.status)
+    })
+
+    $(".openDetailTolak").click(function(){
+      var detail = _.find(permintaan_aset, { kode:  $(this).data("item")});
+      $("#tolak1").val(detail.kode)
+      $("#tolak2").val(detail.jenisAset)
+      $("#tolak3").val(detail.brand)
+      $("#tolak4").val(detail.jumlah)
+      $("#tolak5").val(detail.tanggalPermohonan)
+      $("#tolak6").val(detail.status)
+      $("#tolak7").val(detail.desc)
+    })
+
+    $(".openEdit").click(function(){
+      var detail = _.find(permintaan_aset, { kode:  $(this).data("item")});
+      edit = 1;
+      $("#edit1").val(detail.kode)
+      $("#edit2").val(detail.jenisAset)
+      $("#edit3").val(detail.brand)
+      $("#edit4").val(detail.jumlah)
+      $("#edit5").val(detail.tanggalPermohonan)
+      $("#edit7").val(detail.tanggalApproval)
+      $("#edit6").val(detail.prioritas)
+      $("#edit8").val(detail.status)
+    })
+    
+    $("#editBtn").click(function() {
+      if( edit == 1) {
+        var detail = _.find(permintaan_aset, { kode: $("#edit1").val() });
+        var index = _.findIndex(permintaan_aset, { kode:$("#edit1").val()})
+        console.log(detail)
+
+        detail.jenisAset = $("#edit2").val()
+        detail.brand = $("#edit3").val()
+        detail.jumlah = $("#edit4").val()
+        detail.prioritas = $("#edit6").val()
+
+        
+        permintaan_aset.splice(index, 1, detail);
+        loadTable(permintaan_aset)
+        localStorage.setItem("permintaan_aset", JSON.stringify(permintaan_aset));
+        $('#modal-konfirmasi-yes, #modal-edit').modal('toggle');
+      }
+      else if( edit == 0) { 
+        var newData = {
+          kode: $("#insert1").val(),
+          jenisAset: $("#insert2").val(),
+          brand: $("#insert3").val(),
+          jumlah: $("#insert4").val(),
+          tanggalPermohonan: $("#insert6").val(),
+          tanggalApproval: '',
+          prioritas: $("#insert5").val(),
+          status: 'Meminta Pengadaan',
+          desc: ''
+        }
+        
+        permintaan_aset.push(newData)
+        loadTable(permintaan_aset)
+        localStorage.setItem("permintaan_aset", JSON.stringify(permintaan_aset));
+        $('#modal-konfirmasi-yes, #modal-tambah').modal('toggle');
+      }
+    })
+
+    $("#deleteBtn").click(function() {
+      var detail = _.find(permintaan_aset, { kode: $("#edit1").val() });
+      var index = _.findIndex(permintaan_aset, { kode:$("#edit1").val()})
+
+      permintaan_aset.splice(index, 1);
+      loadTable(permintaan_aset)
+      localStorage.setItem("permintaan_aset", JSON.stringify(permintaan_aset));
+      $('#modal-konfirmasi-no, #modal-edit').modal('toggle');
+    })
+
+    $("#addBtn").click(function(){
+      var random = Math.floor(Math.random() * 100) + 1; 
+      $("#insert1").val("P00" + random)
+      edit = 0;
     })
   })
   //table
-    $(function () {
-    $('#example3').DataTable()
-    $('#example2').DataTable({
-      'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : false
-    })
-  })
-    //table
-    $(function () {
-    $('#example4').DataTable()
-    $('#example2').DataTable({
-      'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : false
-    })
-  })
-    //table
-    $(function () {
-    $('#example5').DataTable()
-    $('#example2').DataTable({
-      'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : false
-    })
-  })
+
 </script>

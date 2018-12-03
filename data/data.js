@@ -71,7 +71,7 @@ var data = {
     {
       kodeAset: 'AS0129',
       noSerial: '11512512512',
-      nama: 'Komputer001',
+      nama: 'Komputer - 001',
       jenis: 'Komputer',
       brand: 'IBM',
       lokasi: 'Lab Komputer 1',
@@ -84,7 +84,7 @@ var data = {
     {
       kodeAset: 'AS0130',
       noSerial: '11512512512',
-      nama: 'Komputer002',
+      nama: 'Komputer - 002',
       jenis: 'Komputer',
       brand: 'IBM',
       lokasi: 'Lab Komputer 2',
@@ -114,25 +114,133 @@ var data = {
   [
     {
       kode: 'P0001',
-      tanggal: '12-12-2018',
-      tanggalApprove: '',
-      status: 'Pending',
+      jenisAset: 'Laptop',
+      brand: 'IBM',
+      jumlah: '12',
+      tanggalPermohonan: '11/8/2018',
+      tanggalApproval: '',
+      prioritas: 'High',
+      status: 'Meminta Pengadaan',
+      desc: ''
+    },
+    {
+      kode: 'P0002',
+      jenisAset: 'Printer',
+      brand: 'IBM',
+      jumlah: '10',
+      tanggalPermohonan: '11/8/2018',
+      tanggalApproval: '',
+      prioritas: 'Medium',
+      status: 'Meminta Pengadaan',
+      desc: ''
+    },
+    {
+      kode: 'P0003',
+      jenisAset: 'Router',
+      brand: 'IBM',
+      jumlah: '8',
+      tanggalPermohonan: '11/8/2018',
+      tanggalApproval: '',
+      prioritas: 'Critical',
+      status: 'Meminta Pengadaan',
+      desc: ''
+    },
+    {
+      kode: 'P0004',
+      jenisAset: 'Router',
+      brand: 'IBM',
+      jumlah: '5',
+      tanggalPermohonan: '11/8/2018',
+      tanggalApproval: '18/8/2018',
+      prioritas: 'High',
+      status: 'Diproses',
+      desc: ''
+    },
+    {
+      kode: 'P0012',
+      jenisAset: 'Komputer',
+      brand: 'IBM',
+      jumlah: '7',
+      tanggalPermohonan: '11/8/2018',
+      tanggalApproval: '18/8/2018',
+      prioritas: 'High',
+      status: 'Diproses',
+      desc: ''
+    },
+    {
+      kode: 'P0005',
+      jenisAset: 'Laptop',
+      brand: 'IBM',
+      jumlah: 'Pending',
+      tanggalPermohonan: '11/8/2018',
+      tanggalApproval: '18/8/2018',
+      prioritas: 'High',
+      status: '2',
+      desc: 'Tidak Sesuai RAB'
+    },
+    {
+      kode: 'P0006',
+      jenisAset: 'Router',
+      brand: 'IBM',
+      jumlah: '18',
+      tanggalPermohonan: '11/8/2018',
+      tanggalApproval: '',
+      prioritas: 'High',
+      status: 'Selesai',
+      desc: ''
+    }
+  ],
+  pengadaan_aset: 
+  [
+    {
+      kode: 'PE001',
+      tanggalApproval: '11/20/2018',
+      vendor: 'Vendor 1',
+      jumlah: '12',
+      total: '14000000',
+      status: 'Selesai',
       lists: [
         {
-          kode: 'A00001',
           jenis: 'Laptop',
-          brand: 'Asus',
-          jumlah: 10,
-          order: 0,
+          jumlah: '4',
+          harga: '14000000'
         },
         {
-          kode: 'A00002',
+          jenis: 'Router',
+          jumlah: '5',
+          harga: '120000'
+        },
+        {
           jenis: 'Keyboard',
-          brand: 'Logitec',
-          jumlah: 15,
-          order: 5
+          jumlah: '1',
+          harga: '120000'
         },
       ]
-    }
+    },
+    {
+      kode: 'PE002',
+      tanggalApproval: '11/21/2018',
+      vendor: 'Vendor 2',
+      jumlah: '12',
+      total: '14000000',
+      status: 'Selesai',
+      lists: [
+        {
+          jenis: 'Laptop',
+          jumlah: '4',
+          harga: '14000000'
+        },
+        {
+          jenis: 'Mouse',
+          jumlah: '5',
+          harga: '120000'
+        },
+        {
+          jenis: 'Keyboard',
+          jumlah: '1',
+          harga: '120000'
+        },
+      ]
+    },
   ]
 }
