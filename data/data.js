@@ -262,6 +262,6 @@ var data = {
       kontak: '0210491925',
       web: 'vendor-dua.com',
       desc: 'Menjual Aneka Software'
-    },
+    },  
   ]
 }
