@@ -276,6 +276,7 @@ var data = {
       tanggalSelesai: '',
       biaya: '',
       caraPenyelesaian: '',
+      keyword: 'Rusak',
       lists: [
         {
           lokasiAset:'Lab Komputer 1',
