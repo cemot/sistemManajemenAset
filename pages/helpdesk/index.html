@@ -139,19 +139,18 @@
                 </div><br><br>
               </div>
               <div class="modal-footer">
-                 <table id="example2" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Nomor</th>
-                  <th>Lokasi Aset</th>
-                  <th>Jenis Aset</th>
-                  <th>Nama Aset</th>
-                </tr>
-                </thead>
-                <tbody>
-                
-                </tbody>
-              </table>
+                  <table id="example2" class="table table-bordered table-striped">
+                      <thead>
+                      <tr>
+                        <th>Nomor</th>
+                        <th>Lokasi Aset</th>
+                        <th>Jenis Aset</th>
+                        <th>Nama Aset</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                    </table>
              </div>
             </div>
             <!-- /.modal-content -->
@@ -263,12 +262,6 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Lab Komputer</td>
-                  <td>Komputer</td>
-                  <td>K001 - Komputer</td>
-                </tr>
                 </tbody>
               </table>
              </div>
@@ -366,10 +359,23 @@
   }
 
   function loadDetailTableEdit(data) {
-    $("#example2 body, #example3 tbody").html("")
+    $("#example3 tbody").html("")
 
     $.each(data, function(index, item) {
-      $("#example2 body, #example3 tbody").append(`<tr>
+      $("#example3 tbody").append(`<tr>
+        <td>${index + 1}</td>
+        <td>${item.lokasiAset}</td>
+        <td>${item.jenisAset}</td>
+        <td>${item.namaAset}</td>
+      </tr>`)
+    });
+  }
+
+  function loadDetailTableDetail(data) {
+    $("#example2 tbody").html("")
+
+    $.each(data, function(index, item) {
+      $("#example2 tbody").append(`<tr>
         <td>${index + 1}</td>
         <td>${item.lokasiAset}</td>
         <td>${item.jenisAset}</td>
@@ -396,7 +402,7 @@
       $("#detail9").val(detail.biaya)
       $("#detail10").val(detail.keyword)
 
-      loadDetailTableEdit(detail.lists)
+      loadDetailTableDetail(detail.lists)
     })
 
     $(".openEdit").click(function(){
