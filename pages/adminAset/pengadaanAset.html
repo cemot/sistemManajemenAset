@@ -497,7 +497,7 @@
   function loadAset(data) {
     $.each(data, function(index, item) {
       $("#insert2, #edit2").append(`
-        <option value=${item.nama}>${item.nama}</option>
+        <option value=${item.jenis}>${item.jenis}</option>
       `)
     });
   }
@@ -508,10 +508,10 @@
   
   //table
   $(function () {
-    var asets = JSON.parse(localStorage.getItem("asets"))
+    var master_asets = JSON.parse(localStorage.getItem("master_asets"))
     var permintaan_aset = JSON.parse(localStorage.getItem("permintaan_aset"))
     loadTable(permintaan_aset)
-    loadAset(asets)
+    loadAset(master_asets)
     
     var edit;
 
