@@ -136,6 +136,7 @@
   var jumlah = 0
   var total = 0
   var grandTotal = 0
+  var lists = []
   
   $('#datepicker').datepicker({
       autoclose: true
@@ -167,13 +168,13 @@
       jumlah += item.jumlah
       total += item.harga
       grandTotal += (item.jumlah * item.harga)
-      $("#example1 tbody").append(`<tr>
+      $("#example1 tbody").append(`<tr id=rowDetail_${index + 1}>
         <td>${index + 1}</td>
         <td>${item.jenis}</td>
         <td>${item.jumlah}</td>
         <td>Rp ${numeral(item.harga).format('0,0')}</td>
         <td>Rp ${numeral(item.jumlah * item.harga).format('0,0')}</td>
-        <td><a href="#" data-toggle="modal" data-target="#modal-detail" class="openDetail" data-item=${(item.kode)}>Delete</a></td>
+        <td><a href="#" class="deleteItem" data-index=${index} data-item=${(item.kode)}>Delete</a></td>
       </tr>`)
     });
 
@@ -181,10 +182,18 @@
         <td colspan='4'>Grand Total </td>
         <td colspan='2'><b>Rp ${numeral(grandTotal).format('0,0')}</b></td>
       </tr>`)
+
+    $(".deleteItem").click(function() {
+
+      var index = $(this).data('index')
+      console.log(index)
+      lists.splice(index,1)
+      loadPermintaanItem(lists)
+    })
   }
   
   $(function () {
-    var lists = []
+    
     var tanggalApproval = '12/20/2018'
     var pengadaan_aset = JSON.parse(localStorage.getItem("pengadaan_aset"))
     var permintaan_aset = JSON.parse(localStorage.getItem("permintaan_aset"))
@@ -204,6 +213,7 @@
     var random = Math.floor(Math.random() * 100) + 1; 
     $("#insert1").val("PE00" + random)
 
+    
     
     $("#addBtn").click(function() {
       var newData = {
