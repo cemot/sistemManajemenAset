@@ -74,24 +74,24 @@
                   </div>
                 </div><br><br><br>
                 <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label" >Keyword</label>
+                    <label for="inputEmail3" class="col-sm-2 control-label" >Kata Kunci</label>
   
                     <div class="col-sm-10">
-                      <input type="text" class="form-control"  id="detail3" value="Penting" disabled>
+                      <input type="text" class="form-control" id="detail3" value="" disabled>
                     </div>
-                  </div><br><br>
+                  </div><br><br>  
                  <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Prioritas Laporan</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control"  id="detail4" value="Penting" disabled>
+                    <input type="text" class="form-control" id="detail4" value="Penting" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control"  id="detail5" value="Belum Terverifikasi" disabled>
+                    <input type="text" class="form-control" id="detail5" value="Belum Terverifikasi" disabled>
                   </div>
                 </div><br><br>
                  <div class="form-group">
@@ -157,8 +157,7 @@
                   <div class="col-sm-10">
                    <textarea class="form-control" rows="2" id="edit2">Komputer tidak bisa menyala</textarea>
                   </div>
-                </div><br><br>
-                
+                </div><br><br><br>
                  <div class="form-group" style="display:none">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Prioritas Laporan</label>
 
@@ -169,14 +168,13 @@
                   </select>
                   </div>
                 </div>
-                <div class="box-body">
-                    <div class="form-group">
-                   <label for="inputEmail3" class="col-sm-2 control-label" >Kata Kunci</label>
- 
-                   <div class="col-sm-10">
-                     <input type="text" class="form-control" id="edit9" value="">
-                   </div>
-                 </div><br><br>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label" >Kata Kunci</label>
+  
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="edit9" value="">
+                    </div>
+                  </div><br><br>  
                  <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
 
@@ -229,7 +227,7 @@
             <button id="submitEditBtn" class="btn btn-success pull-left">Simpan</button>
 				</div>
 				<div class="col-sm-4 text-center"> 
-    				<a href="#" data-toggle="modal" data-target="#modal-konfirmasi-no"><button type="submit" class="btn btn-danger">Hapus Laporan</button></a> 
+    			<button id="hapusBtn" class="btn btn-danger">Hapus Laporan</button>
 				</div>
 				<div class="col-sm-4 text-center"> 
     			<button type="submit" id="addEditBtn" class="btn btn-primary pull-right">Tambah Aset</button>
@@ -267,7 +265,7 @@
               <div class="modal-body">
               <div class="box">
                 <div class="box-body">
-                  <div class="form-group">
+                   <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Kode Laporan</label>
 
                   <div class="col-sm-10">
@@ -281,7 +279,6 @@
                    <textarea class="form-control" rows="2" id="insert2" placeholder="Deskripsi Masalah"></textarea>
                   </div>
                 </div><br><br><br>
-                
                 <div class="box-body">
                     <div class="form-group">
                    <label for="inputEmail3" class="col-sm-2 control-label" >Kata Kunci</label>
@@ -406,8 +403,7 @@
  </div>
 </section>
 
-
-  <!-- jQuery 3 -->
+<!-- jQuery 3 -->
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -425,6 +421,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 <script>
+  var edit_lists = []
+  var lists = []
   //table
   function loadLaporan(data) {
     $("#example1 tbody").html("")
@@ -439,7 +437,7 @@
           <td><a href="#" data-toggle="modal" data-target="#modal-edit" class="openEdit" data-item=${(item.kode)}>Edit</a></td>
         </tr>`)
     });
-
+    
     $('#example1').DataTable()
   }
 
@@ -470,22 +468,48 @@
         <td>${item.lokasiAset}</td>
         <td>${item.jenisAset}</td>
         <td>${item.namaAset}</td>
-        <td><a href="#" data-item=${(item.kode)}>Delete</a></td>
+        <td><a href="#" class="deleteItem" data-index=${index}>Delete</a></td>
       </tr>`)
     });
+
+    $(".deleteItem").click(function(){
+      var index = $(this).data("index")
+      lists.splice(index,1)
+      loadLaporanAsetInsert(lists)
+    })
   }
 
-  function loadDetailTableEdit(data) {
-    $("#example2 body, #example3 tbody").html("")
+  function loadDetailTableDetail(data) {
+    $("#example2 tbody").html("")
 
     $.each(data, function(index, item) {
-      $("#example2 body, #example3 tbody").append(`<tr>
+      $("#example2 tbody").append(`<tr>
         <td>${index + 1}</td>
         <td>${item.lokasiAset}</td>
         <td>${item.jenisAset}</td>
         <td>${item.namaAset}</td>
       </tr>`)
     });
+  }
+
+  function loadDetailTableEdit(data) {
+    $("#example3 tbody").html("")
+
+    $.each(data, function(index, item) {
+      $("#example3 tbody").append(`<tr>
+        <td>${index + 1}</td>
+        <td>${item.lokasiAset}</td>
+        <td>${item.jenisAset}</td>
+        <td>${item.namaAset}</td>
+        <td><a href="#" class="deleteItem" data-index=${index}>Delete</a></td>
+      </tr>`)
+    });
+
+    $(".deleteItem").click(function(){
+      var index = $(this).data("index")
+      edit_lists.splice(index,1)
+      loadDetailTableEdit(edit_lists)
+    })
   }
 
   $(function () {
@@ -502,23 +526,25 @@
     
     $("#tambahBtn").click(function() {
       var random = Math.floor(Math.random() * 100) + 1; 
-      $("#insert1").val("P00" + random)
+      $("#insert1").val("L00" + random)
     })
 
     $(".openDetail").click(function(){
+      edit_lists = []
       var detail = _.find(laporan, { kode:  $(this).data("item")});
       
       $("#detail1").val(detail.kode)
       $("#detail2").val(detail.desc)
       $("#detail3").val(detail.keyword)
-      $("#detail4").val(detail.status)
+      $("#detail4").val(detail.prioritas)
+      $("#detail5").val(detail.status)
       
       edit_lists = detail.lists
-      loadDetailTableEdit(detail.lists)
+      loadDetailTableDetail(detail.lists)
     })
-
-    var edit_lists = []
+    
     $(".openEdit").click(function(){
+      edit_lists = []
       var detail = _.find(laporan, { kode:  $(this).data("item")});
       
       $("#edit1").val(detail.kode)
@@ -542,7 +568,6 @@
       loadDetailTableEdit(edit_lists)
     })
     
-    var lists = []
     $("#addBtn").click(function() {
       var newData = {
         lokasiAset: $("#insert4").val(),
@@ -563,22 +588,22 @@
       {
         kode: $("#edit1").val(),
         desc: $("#edit2").val(),
-        prioritas: $("#edit3").val(),
+        prioritas: detail.prioritas,
         status: "Belum Terverifikasi",
-        staff: '',
-        tanggalApproval: '',
-        tanggalPerbaikan: '',
-        tanggalSelesai: '',
-        biaya: '',  
-        caraPenyelesaian: '',
+        staff: detail.staff,
+        tanggalApproval: detail.tanggalApproval,
+        tanggalPerbaikan: detail.tanggalPerbaikan,
+        tanggalSelesai: detail.tanggalSelesai,
+        biaya: detail.biaya,  
+        caraPenyelesaian: detail.caraPenyelesaian,
         keyword: $("#edit9").val(),
         lists: edit_lists
       }
-
+      
       laporan.splice(index, 1, newLaporan);
       localStorage.setItem("laporan", JSON.stringify(laporan));
       loadLaporan(laporan);
-      $('#modal-konfirmasi-yes, #modal-edit').modal('hide');
+      window.location = "index.html"
     })
 
     $("#submitBtn").click(function() {
@@ -601,7 +626,16 @@
       laporan.push(newLaporan)
       localStorage.setItem("laporan", JSON.stringify(laporan));
       loadLaporan(laporan);
-      $('#modal-konfirmasi-yes, #modal-edit').modal('hide');
+      window.location = "index.html"
+    })
+
+    $("#hapusBtn").click(function() {
+      var detail = _.find(laporan, { kode: $("#edit1").val() });
+      var index = _.findIndex(laporan, { kode:$("#edit1").val()})
+      laporan.splice(index, 1);
+      localStorage.setItem("laporan", JSON.stringify(laporan));
+      loadLaporan(laporan);
+      window.location = "index.html"
     })
   })
 </script>

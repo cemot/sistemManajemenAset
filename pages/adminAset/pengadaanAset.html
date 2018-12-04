@@ -555,14 +555,12 @@
       if( edit == 1) {
         var detail = _.find(permintaan_aset, { kode: $("#edit1").val() });
         var index = _.findIndex(permintaan_aset, { kode:$("#edit1").val()})
-        console.log(detail)
 
         detail.jenisAset = $("#edit2").val()
         detail.brand = $("#edit3").val()
         detail.jumlah = $("#edit4").val()
         detail.prioritas = $("#edit6").val()
 
-        
         permintaan_aset.splice(index, 1, detail);
         loadTable(permintaan_aset)
         localStorage.setItem("permintaan_aset", JSON.stringify(permintaan_aset));

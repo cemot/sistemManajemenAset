@@ -79,26 +79,7 @@
 <script src="../data/data.js"></script>
 <script>
   function loadAllData() {
-    // localStorage.setItem("master_asets", JSON.stringify(data.master_asets));
-    // localStorage.setItem("aset_categories", JSON.stringify(data.aset_categories));
-    // localStorage.setItem("asets", JSON.stringify(data.asets));
-    // localStorage.setItem("locations", JSON.stringify(data.locations));
-    // localStorage.setItem("permintaan_aset", JSON.stringify(data.permintaan_aset));
-    // localStorage.setItem("pengadaan_aset", JSON.stringify(data.pengadaan_aset));
-    // localStorage.setItem("vendors", JSON.stringify(data.vendors));
-    // localStorage.setItem("laporan", JSON.stringify(data.laporan));
 
-    //localStorage.clear()
-    if(typeof localStorage.setItem("master_asets", JSON.stringify(data.master_asets)) == 'undefined'){
-      localStorage.setItem("master_asets", JSON.stringify(data.master_asets));
-      localStorage.setItem("aset_categories", JSON.stringify(data.aset_categories));
-      localStorage.setItem("asets", JSON.stringify(data.asets));
-      localStorage.setItem("locations", JSON.stringify(data.locations));
-      localStorage.setItem("permintaan_aset", JSON.stringify(data.permintaan_aset));
-      localStorage.setItem("pengadaan_aset", JSON.stringify(data.pengadaan_aset));
-      localStorage.setItem("vendors", JSON.stringify(data.vendors));
-      localStorage.setItem("laporan", JSON.stringify(data.laporan));
-    }
   }
 
   $(function () {
