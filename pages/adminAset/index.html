@@ -14,14 +14,48 @@
       </ol>
  </section>
  <section class="content">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="box box-danger">
+        <div class="box-header with-border">
+          <h3 class="box-title">Status Kesehatan Aset</h3>
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+            </button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+          </div>
+        </div>
+        <div class="box-body">
+          <div id="donut-chart" style="height: 350px;"></div>
+        </div>
+      </div>
+    </div>
 
-      <!-- /.row -->
+    <div class="col-md-6">
+      <div class="box box-success">
+          <div class="box-header with-border">
+            <h3 class="box-title">Ranking Aset Bermasalah</h3>
 
-      <div class="row">
-        <div class="col-md-6">
-          <div class="box box-danger">
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body">
+            <div class="chart">
+              <canvas id="barChart" style="height:350px"></canvas>
+            </div>
+          </div>
+          <!-- /.box-body -->
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="box box-success">
             <div class="box-header with-border">
-              <h3 class="box-title">Donut Chart</h3>
+              <h3 class="box-title">Frekuensi Pelaporan Aset</h3>
+  
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                 </button>
@@ -29,102 +63,14 @@
               </div>
             </div>
             <div class="box-body">
-              <canvas id="pieChart" style="height:250px"></canvas>
+              <div class="chart">
+                <canvas id="lineChart" style="height:350px"></canvas>
+              </div>
             </div>
             <!-- /.box-body -->
           </div>
-        </div>
-        
-        <div class="col-md-6">
-          <div class="box">
-            <div class="box-header with-border">
-              <h3 class="box-title">Monthly Recap Report</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <div class="btn-group">
-                  <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-wrench"></i></button>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </div>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <div class="row">
-                <div class="col-md-8">
-                  <p class="text-center">
-                    <strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong>
-                  </p>
-
-                  <div class="chart">
-                    <!-- Sales Chart Canvas -->
-                    <canvas id="salesChart" style="height: 180px;"></canvas>
-                  </div>
-                  <!-- /.chart-responsive -->
-                </div>
-                <!-- /.col -->
-                <div class="col-md-4">
-                  <p class="text-center">
-                    <strong>Goal Completion</strong>
-                  </p>
-
-                  <div class="progress-group">
-                    <span class="progress-text">Add Products to Cart</span>
-                    <span class="progress-number"><b>160</b>/200</span>
-
-                    <div class="progress sm">
-                      <div class="progress-bar progress-bar-aqua" style="width: 80%"></div>
-                    </div>
-                  </div>
-                  <!-- /.progress-group -->
-                  <div class="progress-group">
-                    <span class="progress-text">Complete Purchase</span>
-                    <span class="progress-number"><b>310</b>/400</span>
-
-                    <div class="progress sm">
-                      <div class="progress-bar progress-bar-red" style="width: 80%"></div>
-                    </div>
-                  </div>
-                  <!-- /.progress-group -->
-                  <div class="progress-group">
-                    <span class="progress-text">Visit Premium Page</span>
-                    <span class="progress-number"><b>480</b>/800</span>
-
-                    <div class="progress sm">
-                      <div class="progress-bar progress-bar-green" style="width: 80%"></div>
-                    </div>
-                  </div>
-                  <!-- /.progress-group -->
-                  <div class="progress-group">
-                    <span class="progress-text">Send Inquiries</span>
-                    <span class="progress-number"><b>250</b>/500</span>
-
-                    <div class="progress sm">
-                      <div class="progress-bar progress-bar-yellow" style="width: 80%"></div>
-                    </div>
-                  </div>
-                  <!-- /.progress-group -->
-                </div>
-                <!-- /.col -->
-              </div>
-              <!-- /.row -->
-            </div>
-            <!-- /.box-footer -->
-          </div>
-          <!-- /.box -->
-        </div>
-        <!-- /.col -->
       </div>
-      <!-- /.row -->
+  </div>
  </section>
 
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
@@ -140,20 +86,137 @@
 <!-- ChartJS -->
 <script src="../../bower_components/chart.js/Chart.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="../../dist/js/pages/dashboard2.js"></script>
+<!-- <script src="../../dist/js/pages/dashboard2.js"></script> -->
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+<!-- FLOT CHARTS -->
+<script src="../../bower_components/Flot/jquery.flot.js"></script>
+<!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+<script src="../../bower_components/Flot/jquery.flot.resize.js"></script>
+<!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+<script src="../../bower_components/Flot/jquery.flot.pie.js"></script>
+<!-- FLOT CATEGORIES PLUGIN - Used to draw bar charts -->
+<script src="../../bower_components/Flot/jquery.flot.categories.js"></script>
+
 <script>
-  //table
-    $(function () {
-    $('#example1').DataTable()
-    $('#example2').DataTable({
-      'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : false
+  $(function () {
+    var donutData = [
+      { label: 'Rusak', data: 10, color: '#ff4246' },
+      { label: 'Tersedia', data: 75, color: '#0097fa' },
+      { label: 'Dalam Pemeliharaan', data: 15, color: '#fff161' }
+    ]
+    $.plot('#donut-chart', donutData, {
+      series: {
+        pie: {
+          show       : true,
+          radius     : 1,
+          innerRadius: 0.5,
+          label      : {
+            show     : true,
+            radius   : 2 / 3,
+            formatter: labelFormatter,
+            threshold: 0.1
+          }
+
+        }
+      },
+      legend: {
+        show: true
+      }
     })
+    
+    var barChartData = {
+      labels  : ['Laptop Asus A0991', 'Laptop Dell A19881', 'Komputer A01223', 'Laptop A01212', 'Komputer A1234', 'Komputer A92142', 'Komputer A28123', 'Keyboard A99212', 'Mouse A91213', 'Server A12412'],
+      datasets: [
+        {
+          label : 'Aset',
+          data  : [10, 8, 7, 5, 4, 4, 3, 3, 3, 2],
+          fillColor : 'rgba(210, 214, 222, 1)',
+        }
+      ]
+    }
+    //-------------
+    var barChartCanvas                   = $('#barChart').get(0).getContext('2d')
+    var barChart                         = new Chart(barChartCanvas)
+    var barChartData                     = barChartData
+    var barChartOptions                  = {
+      //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
+      scaleBeginAtZero        : true,
+      //Boolean - Whether grid lines are shown across the chart
+      scaleShowGridLines      : true,
+      //String - Colour of the grid lines
+      //Number - Width of the grid lines
+      scaleGridLineWidth      : 1,
+      //Boolean - Whether to show horizontal lines (except X axis)
+      scaleShowHorizontalLines: true,
+      //Boolean - Whether to show vertical lines (except Y axis)
+      scaleShowVerticalLines  : true,
+      //Boolean - If there is a stroke on each bar
+      barShowStroke           : true,
+      //Number - Pixel width of the bar stroke
+      barStrokeWidth          : 2,
+      //Number - Spacing between each of the X value sets
+      barValueSpacing         : 10,
+      //Number - Spacing between data sets within X values
+      barDatasetSpacing       : 1,
+      //String - A legend template
+      legendTemplate          : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].fillColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>',
+      //Boolean - whether to make the chart responsive
+      responsive              : true,
+      maintainAspectRatio     : true
+    }
+
+    barChartOptions.datasetFill = false
+    barChart.Bar(barChartData, barChartOptions)
+
+    var lineChartData = {
+      labels  : ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October'],
+      datasets: [
+        {
+          label : 'Jumlah Laporan',
+          data  : [21, 35, 40, 24, 34, 33, 44, 51, 39, 42],
+          fillColor : 'rgba(210, 214, 222, 1)',
+        }
+      ]
+    }
+    //-------------
+    var lineChartCanvas                   = $('#lineChart').get(0).getContext('2d')
+    var lineChart                         = new Chart(lineChartCanvas)
+    var lineChartOptions                  = {
+      //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
+      scaleBeginAtZero        : true,
+      //Boolean - Whether grid lines are shown across the chart
+      scaleShowGridLines      : true,
+      //String - Colour of the grid lines
+      //Number - Width of the grid lines
+      scaleGridLineWidth      : 1,
+      //Boolean - Whether to show horizontal lines (except X axis)
+      scaleShowHorizontalLines: true,
+      //Boolean - Whether to show vertical lines (except Y axis)
+      scaleShowVerticalLines  : true,
+      //Boolean - If there is a stroke on each bar
+      barShowStroke           : true,
+      //Number - Pixel width of the bar stroke
+      barStrokeWidth          : 2,
+      //Number - Spacing between each of the X value sets
+      barValueSpacing         : 10,
+      //Number - Spacing between data sets within X values
+      barDatasetSpacing       : 1,
+      //String - A legend template
+      legendTemplate          : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].fillColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>',
+      //Boolean - whether to make the chart responsive
+      responsive              : true,
+      maintainAspectRatio     : true
+    }
+
+    lineChartOptions.datasetFill = false
+    lineChart.Line(lineChartData, lineChartOptions)
   })
+
+  function labelFormatter(label, series) {
+    return '<div style="font-size:13px; text-align:center; padding:2px; color: #000; text-shadow:1px 1px 1px rgba(0,0,0,.5) font-weight: 600;">'
+      + label
+      + '<br>'
+      + Math.round(series.percent) + '%</div>'
+  }
 </script>

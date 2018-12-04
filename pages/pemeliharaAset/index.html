@@ -149,7 +149,7 @@
                   <label for="inputEmail3" class="col-sm-2 control-label">Deskripsi Masalah</label>
 
                   <div class="col-sm-10">
-                   <textarea class="form-control" rows="2" id="edit2" disabled >Monitor tidak bisa menyala</textarea>
+                   <textarea class="form-control" rows="2" id="edit2" >Monitor tidak bisa menyala</textarea>
                   </div>
                 </div><br><br><br>
                    <div class="form-group">
@@ -339,7 +339,8 @@
     $("#editBtn").click(function() {
       var detail = _.find(laporan, { kode: $("#edit1").val() });
       var index = _.findIndex(laporan, { kode:$("#edit1").val()})
-
+      
+      detail.desc = $("#edit2").val()
       detail.caraPenyelesaian = $("#edit3").val()
       detail.status = $("#edit4").val()
       detail.tanggalApproval = $("#edit5").val()
