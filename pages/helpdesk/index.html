@@ -72,6 +72,13 @@
                    <textarea class="form-control" id="detail2" rows="2" disabled></textarea>
                   </div>
                 </div><br><br><br>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Keyword</label>
+  
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="detail10" value="" disabled>
+                    </div>
+                  </div><br><br><br>
                  <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Prioritas Laporan</label>
 
@@ -176,6 +183,13 @@
                    <textarea class="form-control" rows="2" id="edit2" disabled >Monitor tidak bisa menyala</textarea>
                   </div>
                 </div><br><br><br>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label" >Keyword</label>
+  
+                    <div class="col-sm-10">
+                       <input type="text" class="form-control pull-right" id="edit9" value="">
+                    </div>
+                  </div><br><br>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
 
@@ -373,13 +387,14 @@
   
       $("#detail1").val(detail.kode)
       $("#detail2").val(detail.desc)
-      $("#detail3").val(detail.desc)
+      $("#detail3").val(detail.prioritas)
       $("#detail4").val(detail.staff)
-      $("#detail6").val(detail.status)
+      $("#detail5").val(detail.status)
       $("#detail6").val(detail.tanggalApproval)
       $("#detail7").val(detail.tanggalPerbaikan)
       $("#detail8").val(detail.tanggalSelesai)
       $("#detail9").val(detail.biaya)
+      $("#detail10").val(detail.keyword)
 
       loadDetailTableEdit(detail.lists)
     })
@@ -395,7 +410,7 @@
       $("#edit6").val(detail.tanggalPerbaikan)
       $("#edit7").val(detail.tanggalSelesai)
       $("#edit8").val(detail.biaya)
-
+      $("#edit9").val(detail.keyword)
       loadDetailTableEdit(detail.lists)
     })
 
@@ -410,6 +425,7 @@
       detail.tanggalPerbaikan = $("#edit6").val()
       detail.tanggalSelesai = $("#edit7").val()
       detail.biaya = $("#edit8").val()
+      detail.keyword = $("#edit9").val()
       
       laporan.splice(index, 1, detail);
       localStorage.setItem("laporan", JSON.stringify(laporan));
