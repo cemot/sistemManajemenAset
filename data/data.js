@@ -22,10 +22,16 @@ var data = {
       role: 'pemelihara'
     },
     {
+      username: 'civitas@ui.ac.id',
+      name: 'Civitas UI',
+      role: 'civitas'
+    },
+    {
       username: 'penanggung@ui.ac.id',
       name: 'Penanggung Jawab Ruangan',
       role: 'penanggung'
     }
+    
   ],
   master_asets:
   [
