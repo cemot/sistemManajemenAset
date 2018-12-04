@@ -114,10 +114,15 @@
       
       $.each(data.users, function(index,user) {
         if(username == user.username){
+          if(username != 'civitas@ui.ac.id'){
           valid = true;
           localStorage.setItem("user", JSON.stringify(user));
           loadAllData()
           location.href = "home.html";
+          }
+          else{
+            location.href = "toko/toko.html";
+          }
         }
       });
       
