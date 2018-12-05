@@ -189,9 +189,6 @@
 
                   <div class="col-sm-10">
                     <select class="form-control" id="edit5">
-                      <option>Lab Komputer</option>
-                      <option>Kelas 2A</option>
-                      <option>Kelas 3A</option>
                   </select>
                   </div>
                 </div><br><br>
@@ -199,9 +196,6 @@
                   <label for="inputEmail3" class="col-sm-2 control-label" >Jenis Aset</label>
                  <div class="col-sm-10">
                     <select class="form-control" id="edit6">
-                      <option>Laptop</option>
-                      <option>Komputer</option>
-                      <option>Router</option>
                   </select>
                   </div>
                 </div><br><br>
@@ -210,9 +204,6 @@
 
                   <div class="col-sm-10">
                     <select class="form-control" id="edit7">
-                      <option>K001 - Komputer</option>
-                      <option>K002 - Komputer</option>
-                      <option>K003 - Komputer</option>
                   </select>
                   </div>
                 </div><br><br>
@@ -444,18 +435,21 @@
   function loadMasterAset(data) {
     $.each(data, function(index, item) {
       $("#insert5").append("<option value='" + item.jenis + "'>" + item.jenis + "</option>")
+      $("#edit6").append("<option value='" + item.jenis + "'>" + item.jenis + "</option>")
     });
   }
 
   function loadAset(data) {
     $.each(data, function(index, item) {
       $("#insert6").append("<option value='" + item.nama + "'>" + item.nama + "</option>")
+      $("#edit7").append("<option value='" + item.nama + "'>" + item.nama + "</option>")
     });
   }
 
   function loadLocation(data) {
     $.each(data, function(index, item) {
       $("#insert4").append("<option value='" + item.name + "'>" + item.name + "</option>")
+      $("#edit5").append("<option value='" + item.name + "'>" + item.name + "</option>")
     });
   }
 

@@ -233,6 +233,17 @@ var data = {
       prioritas: 'High',
       status: 'Selesai',
       desc: ''
+    },
+    {
+      kode: 'P0007',
+      jenisAset: 'Router',
+      brand: 'IBM',
+      jumlah: '10',
+      tanggalPermohonan: '11/8/2018',
+      tanggalApproval: '',
+      prioritas: 'Medium',
+      status: 'Ditolak',
+      desc: ''
     }
   ],
   pengadaan_aset: 

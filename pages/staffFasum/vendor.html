@@ -453,7 +453,7 @@
           desc: $("#edit10").val()
         }
 
-        vendors.splice(index, 1, detail);
+        vendors.splice(index, 1, newVendor);
         localStorage.setItem("vendors", JSON.stringify(vendors));
         window.location = "vendor.html"
       }

@@ -128,7 +128,12 @@
                   <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label" >Prioritas</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="edit4" value="" >
+                      <select type="text" class="form-control" id="edit4" value="" >
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                        <option value="Critical">Critical</option>
+                      </select>
                     </div>
                   </div><br><br>
                   <div class="form-group">
@@ -142,7 +147,7 @@
               </div>
             </div>
             <div class="modal-footer">
-              <a href="#"><button type="submit" class="btn btn-primary pull-right">Edit Aset</button></a>
+              <button type="submit" id="editBtn" class="btn btn-primary pull-right">Edit Aset</button>
               <a href="index.html"><button type="submit" class="btn btn-danger pull-left">Hapus Aset</button></a>
             </div>
           </div>
@@ -182,7 +187,12 @@
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label" >Prioritas</label>
                       <div class="col-sm-10">
-                          <input type="text" class="form-control" id="insert4" value="" >
+                          <select type="text" class="form-control" id="insert4" value="" >
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                            <option value="Critical">Critical</option>
+                          </select>
                       </div>
                     </div><br><br>
                     <div class="form-group">
@@ -283,13 +293,32 @@
         brand: $("#insert3").val(),
         prioritas: $("#insert4").val(),
         total: 0,
-        kategori: $("#insert15").val()
+        kategori: $("#insert5").val()
       }
 
       master_asets.push(newItem)
       loadTable(master_asets)
       localStorage.setItem("master_asets", JSON.stringify(master_asets));
-      $('#modal-tambah').modal('hide');
+      window.location = "masterAset.html"
+    })
+
+    $("#editBtn").click(function() {
+      var detail = _.find(master_asets, { kode: $("#edit1").val() });
+      var index = _.findIndex(master_asets, { kode:$("#edit1").val()})
+      
+      var newItem = {
+        kode: $("#edit1").val(),
+        jenis: $("#edit2").val(),
+        brand: $("#edit3").val(),
+        prioritas: $("#edit4").val(),
+        total: 0,
+        kategori: $("#edit5").val()
+      }
+
+      master_asets.splice(index, 1, newItem);
+      loadTable(master_asets)
+      localStorage.setItem("master_asets", JSON.stringify(master_asets));
+      window.location = "masterAset.html"
     })
   })
 </script>

@@ -27,47 +27,48 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link rel="stylesheet" type="text/css" href="https://sso.ui.ac.id/cas/themes/ui/sso.css" />
 </head>
 <body class="hold-transition login-page">
-<div class="login-box">
-  <div class="login-logo">
-    <a href="../index2.html"><b>Manajemen Aset</b></a>
-  </div>
-  <!-- /.login-logo -->
-  <div class="login-box-body">
-    <p class="login-box-msg">Login</p>
-
-    <form id="loginForm">
-      <div class="form-group has-feedback">
-        <input id="email" type="email" class="form-control" placeholder="Email">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+  <div class="bg"></div>
+  <div class="login-box">
+    <form id="loginForm" class="login">
+      <div class="top">
+        <div class="pull-right"><img src="https://sso.ui.ac.id/cas/themes/ui/logo.png" /></div>
+        <h1>SSO</h1>
+        <div class="sub">Single Sign On</div>
       </div>
-      <div class="form-group has-feedback">
-        <input id="password" type="password" class="form-control" placeholder="Password">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      </div>
-      <div class="row">
-        <div id="loginWarning" style="text-align:center; padding:10px; color:#bf0000"></div>
-      </div>
-      <div class="row">
-        <div class="col-xs-8">
-          <div class="checkbox icheck">
-            <label>
-              <input type="checkbox"> Remember Me
-            </label>
-          </div>
+      <div id="status" class="alert alert-danger form-error">Password salah</div>
+      <div class="middle">
+        <p>Masukkan username dan password UI Anda/<br /><em>Enter your username and password</em>:</p>
+              
+        <div class="form-group">
+          <input id="username" name="username" class="form-control" placeholder="Username" type="text" value="" autocomplete="false"/>
         </div>
-        <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+        <div class="form-group">
+          <input id="password" name="password" class="form-control" placeholder="Password" type="password" value="" autocomplete="off"/> 
         </div>
-        <!-- /.col -->
+      </div>
+      <div class="bottom clearfix">
+      <div class="pull-right" style="margin-top:12px">
+        <button type="submit" class="btn btn-lg btn-primary">Login</button>
       </div>
     </form>
-
-  </div>
-  <!-- /.login-box-body -->
+  <table>
+    <tr>
+      <td style="padding: 0px 10px 10px 10px;">
+          <div class="help"><a href="https://sso.ui.ac.id/account/user/register">Daftar Akun<br /><em>Guest Account</em></a></div>
+      </td>
+      <td style="border-left: solid #D5D5D5; ">
+      </td>
+      <td style="padding: 0px 0px 10px 10px;">
+                    <div class="help"><a href="https://sso.ui.ac.id/account/static/frequently-asked-question-faq">Butuh Bantuan ?<br /><em>Need Help ?</em></a></div>
+      </td>
+    </tr>
+  </table>
+    </div>
+  
 </div>
-<!-- /.login-box -->
 
 <!-- jQuery 3 -->
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
@@ -78,10 +79,6 @@
 
 <script src="../data/data.js"></script>
 <script>
-  function loadAllData() {
-
-  }
-
   $(function () {
     $('input').iCheck({
       checkboxClass: 'icheckbox_square-blue',
@@ -89,28 +86,33 @@
       increaseArea: '20%' /* optional */
     });
     
+    $("#status").hide()
     $( "#loginForm" ).submit(function( e ) {
       var valid = false;
-      var username = $("#email").val()
-      
+      var username = $("#username").val()
+
       $.each(data.users, function(index,user) {
+        
         if(username == user.username){
           if(username != 'civitas@ui.ac.id'){
-          valid = true;
-          localStorage.setItem("user", JSON.stringify(user));
-          loadAllData()
-          location.href = "home.html";
+            valid = true;
+            localStorage.setItem("user", JSON.stringify(user));
+
+            location.href = "home.html";
+            
           }
           else{
             location.href = "toko/toko.html";
           }
         }
       });
-      
-      if(!valid) {
-        $("#loginWarning").html("Username atau Password salah !!")
-      }
       e.preventDefault();
+      if(!valid) {
+        $("#status").show()
+      }else {
+        $("#status").hide()
+      }
+      
     });
   });
 </script>

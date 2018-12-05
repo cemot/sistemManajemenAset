@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
   <link rel="stylesheet" href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
  <section class="content-header">
       <h1>Meminta Pengadaan Aset</h1>
       <ol class="breadcrumb">
@@ -582,7 +583,7 @@
         permintaan_aset.push(newData)
         loadTable(permintaan_aset)
         localStorage.setItem("permintaan_aset", JSON.stringify(permintaan_aset));
-        $('#modal-konfirmasi-yes, #modal-tambah').modal('hide');
+        window.location = "pengadaanAset.html"
       }
     })
 
@@ -593,7 +594,7 @@
       permintaan_aset.splice(index, 1);
       loadTable(permintaan_aset)
       localStorage.setItem("permintaan_aset", JSON.stringify(permintaan_aset));
-      $('#modal-konfirmasi-no, #modal-edit').modal('hide');
+      window.location = "pengadaanAset.html"
     })
 
     $("#addBtn").click(function(){

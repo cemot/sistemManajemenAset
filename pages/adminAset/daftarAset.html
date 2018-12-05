@@ -203,14 +203,23 @@
                   </select>
                   </div>
                 </div><br><br>
+                
                 <div class="form-group">
                   <label for="edit7" class="col-sm-2 control-label" >Lokasi</label>
 
                   <div class="col-sm-10">
-                      <select id="edit7" class="form-control">
+                    <select id="edit7" class="form-control">
                     </select>
                   </div>
                 </div><br><br>
+
+                <div class="form-group" id="gambar">
+                    <label for="edit8" class="col-sm-2 control-label" >Gambar Aset</label>
+  
+                    <div class="col-sm-10">
+                        <input id="insert8" type="file">
+                    </div>
+                  </div><br><br>
               </div>
               <div class="modal-footer">
                   <a href="#" data-toggle="modal" data-target="#modal-konfirmasi-yes"><button type="submit" class="btn btn-success pull-right">Simpan</button></a>
@@ -328,6 +337,7 @@
     loadTable(asets)
     loadLocation(locations)
     loadMasterAset(master_asets)
+    $("#gambar").hide()
     
     $(".openDetail").click(function(){
       var detail = _.find(asets, { kodeAset:$(this).data("item")})
@@ -352,6 +362,10 @@
       $("#edit5").val(detail.brand)
       $("#edit6").val(detail.status)
       $("#edit7").val(detail.lokasi)
+
+      if(detail.status == "Dijual"){
+        $("#gambar").show()
+      }
     })
 
     $("#editBtn").click(function() {
@@ -368,7 +382,15 @@
       asets.splice(index, 1, detail);
       loadTable(asets)
       localStorage.setItem("asets", JSON.stringify(asets));
-      $('#modal-konfirmasi-yes, #modal-edit').modal('toggle');
+      window.location = "daftarAset.html"
     })
+
+    $('#edit6').on('change', function() {
+      if(this.value == "Dijual" ){
+        $("#gambar").show()
+      }else {
+        $("#gambar").hide()
+      }
+    });
   })
 </script>
