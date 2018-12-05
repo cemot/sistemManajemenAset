@@ -213,13 +213,28 @@
                   </div>
                 </div><br><br>
 
-                <div class="form-group" id="gambar">
-                    <label for="edit8" class="col-sm-2 control-label" >Gambar Aset</label>
-  
-                    <div class="col-sm-10">
-                        <input id="insert8" type="file">
-                    </div>
-                  </div><br><br>
+                <hr>
+                <div class="form-group dijual">
+                  <label for="edit8" class="col-sm-2 control-label" >Gambar Aset</label>
+
+                  <div class="col-sm-10">
+                      <input id="edit8" type="file">
+                  </div>
+                </div>
+                <div class="form-group dijual">
+                  <label for="inputEmail3" class="col-sm-2 control-label" >Harga</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="edit9" value="">
+                  </div>
+                </div>
+                <div class="form-group dijual">
+                  <label for="edit8" class="col-sm-2 control-label">Spesifikasi</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" rows="3" id="edit10"></textarea>
+                  </div> 
+                </div>
+
               </div>
               <div class="modal-footer">
                   <a href="#" data-toggle="modal" data-target="#modal-konfirmasi-yes"><button type="submit" class="btn btn-success pull-right">Simpan</button></a>
@@ -293,7 +308,11 @@
 
 <!-- CUSTOM SCRIPT -->
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
-
+<style>
+  .dijual{
+    overflow: hidden;
+  }
+</style>
 <script>
 //table
   function loadTable(data) {
@@ -337,7 +356,7 @@
     loadTable(asets)
     loadLocation(locations)
     loadMasterAset(master_asets)
-    $("#gambar").hide()
+    $(".dijual").css("display","none")
     
     $(".openDetail").click(function(){
       var detail = _.find(asets, { kodeAset:$(this).data("item")})
@@ -364,7 +383,7 @@
       $("#edit7").val(detail.lokasi)
 
       if(detail.status == "Dijual"){
-        $("#gambar").show()
+        $(".dijual").css("display","block")
       }
     })
 
@@ -387,9 +406,9 @@
 
     $('#edit6').on('change', function() {
       if(this.value == "Dijual" ){
-        $("#gambar").show()
+        $(".dijual").css("display","block")
       }else {
-        $("#gambar").hide()
+        $(".dijual").css("display","none")
       }
     });
   })
