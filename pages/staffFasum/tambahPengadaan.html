@@ -144,9 +144,7 @@
   
   function loadVendor(data) {
     $.each(data, function(index, item) {
-      $("#insert2").append(`
-        <option value=${item.namaVendor}>${item.namaVendor}</option>
-      `)
+      $("#insert2").append("<option value='" + item.namaVendor + "'>" + item.namaVendor + "</option>")
     });
   }
 
@@ -154,15 +152,14 @@
     $("#insert3").html("")
     $.each(data, function(index, item) {
       if(item.status == 'Meminta Pengadaan'){
-        $("#insert3").append(`
-          <option>${item.jenisAset} - ${item.kode}</option>
-        `)
+        $("#insert3").append("<option value='" + item.jenisAset + "'>" + item.jenisAset + "</option>")
       }
     });
   }
 
   function loadPermintaanItem(data) {
     $("#example1 tbody").html("")
+    jumlah, total, grandTotal = 0;
 
     $.each(data, function(index, item) {
       jumlah += item.jumlah

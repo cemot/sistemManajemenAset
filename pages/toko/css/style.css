@@ -869,6 +869,7 @@ textarea.input {
 .product .product-img {
   padding: 24px;
   position: relative;
+  height: 262.5px;
 }
 
 .product .product-img>img {

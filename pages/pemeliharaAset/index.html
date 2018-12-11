@@ -110,6 +110,7 @@
                     <input type="text" class="form-control" id="detail5"  value="Terverifikasi" disabled>
                   </div>
                 </div>
+                <br><br>
                  <table id="example2" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -307,10 +308,10 @@
   }
 
   function loadDetailTableEdit(data) {
-    $("#example2 body, #example3 tbody").html("")
+    $("#example2 tbody, #example3 tbody").html("")
 
     $.each(data, function(index, item) {
-      $("#example2 body, #example3 tbody").append(`<tr>
+      $("#example2 tbody, #example3 tbody").append(`<tr>
         <td>${index + 1}</td>
         <td>${item.lokasiAset}</td>
         <td>${item.jenisAset}</td>
