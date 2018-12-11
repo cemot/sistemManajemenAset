@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
   <link rel="stylesheet" href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
  <section class="content-header">
@@ -32,6 +33,7 @@
                   <th>Kode</th>
                   <th>Nama Aset</th>
                   <th>Lokasi</th>
+                  <th>Masa Pemakaian</th>
                   <th>Status</th>
                   <th></th>
                   <th></th>
@@ -56,79 +58,114 @@
               </div>
               <div class="modal-body">
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Kode Aset</label>
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Kode Aset</label>
 
-                  <div class="col-sm-10">
+                  <div class="col-sm-9">
                     <input type="text" class="form-control" id="detail1" value="" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Nomer Serial</label>
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Nomer Serial</label>
 
-                  <div class="col-sm-10">
+                  <div class="col-sm-9">
                     <input type="text" class="form-control" id="detail2" value="" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Nama Aset</label>
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Nama Aset</label>
 
-                  <div class="col-sm-10">
+                  <div class="col-sm-9">
                     <input type="text" class="form-control" id="detail3" value="" disabled>
                   </div>
                 </div><br><br>
                  <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Jenis Aset</label>
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Jenis Aset</label>
 
-                  <div class="col-sm-10">
+                  <div class="col-sm-9">
                     <input type="text" class="form-control" id="detail4" value="" disabled>
                   </div>
                 </div><br><br>
                   <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Brand</label>
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Brand</label>
 
-                  <div class="col-sm-10">
+                  <div class="col-sm-9">
                     <input type="text" class="form-control" id="detail5" value="" disabled>
                   </div>
                 </div><br><br>
-                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Lokasi</label>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Tanggal Pembelian</label>
 
-                  <div class="col-sm-10">
+                  <div class="col-sm-9">
+                   <input type="text" class="form-control" id="detail5" value="12/8/2018" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Harga Beli</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="" value="Rp. 5.000.000" disabled>
+                  </div>
+                </div><br><br>
+                 <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Batas Pemakaian (Tahun)</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="" value="5" disabled>
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Masa Pemakaian (Tahun)</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="" value="1" disabled>
+                  </div>
+                </div><br><br>
+                 <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Penyusutan</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="" value="Rp. 4.000.000" disabled>
+                  </div>
+                </div><br><br>
+                 <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Lokasi</label>
+
+                  <div class="col-sm-9">
                     <input type="text" class="form-control" id="detail6" value="" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Status</label>
 
-                  <div class="col-sm-10">
+                  <div class="col-sm-9">
                     <input type="text" class="form-control" id="detail7" value="" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Kode Laporan</label>
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Kode Laporan</label>
 
-                  <div class="col-sm-10">
+                  <div class="col-sm-9">
                     <input type="text" class="form-control" id="detail8" value="" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Deskripsi Masalah</label>
+                  <label for="inputEmail3" class="col-sm-3 control-label">Deskripsi Masalah</label>
 
-                  <div class="col-sm-10">
+                  <div class="col-sm-9">
                    <textarea class="form-control" rows="2" id="detail9" disabled></textarea>
                   </div>
                 </div><br><br><br>
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Status Pengerjaan</label>
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Status Pengerjaan</label>
 
-                  <div class="col-sm-10">
+                  <div class="col-sm-9">
                     <input type="text" class="form-control" id="detail10" value="" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Bukti Masalah</label>
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Bukti Masalah</label>
 
-                  <div class="col-sm-10" id="detail11">
+                  <div class="col-sm-9" id="detail11">
                     <a target="_blank" rel="noopener noreferrer" href="../../dist/img/photo2.png">Bukti Masalah.jpg</a>,&nbsp
                     <a target="_blank" rel="noopener noreferrer" href="../../dist/img/photo3.png">Bukti Masalah1.jpg</a>,&nbsp
                     <a target="_blank" rel="noopener noreferrer" href="../../dist/img/photo4.png">Bukti Masalah2.jpg</a>&nbsp
@@ -137,10 +174,6 @@
              </div>
               <div class="modal-footer">
               </div>
-               
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-info pull-right" >Cetak</button>
-            </div>
            </div>
           </div>
           <!-- /.modal-content -->
@@ -155,46 +188,81 @@
               </div>
               <div class="modal-body">
                   <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Kode Aset</label>
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Kode Aset</label>
 
-                  <div class="col-sm-10">
+                  <div class="col-sm-9">
                     <input type="text" class="form-control" id="edit1" value="" disabled>
                   </div>
                 </div><br><br>
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Nomer Serial</label>
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Nomer Serial</label>
 
-                  <div class="col-sm-10">
+                  <div class="col-sm-9">
                     <input type="text" class="form-control" id="edit2" value="">
                   </div>
                 </div><br><br>
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Nama Aset</label>
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Nama Aset</label>
 
-                  <div class="col-sm-10">
+                  <div class="col-sm-9">
                     <input type="text" class="form-control" id="edit3" value="">
                   </div>
                 </div><br><br>
                  <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Jenis Aset</label>
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Jenis Aset</label>
 
-                  <div class="col-sm-10">
+                  <div class="col-sm-9">
                     <select id="edit4" class="form-control">
                       
                   </select>
                   </div>
                 </div><br><br>
                   <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Brand</label>
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Brand</label>
 
-                  <div class="col-sm-10">
+                  <div class="col-sm-9">
                     <input type="text" class="form-control" id="edit5" value="">
                   </div>
                 </div><br><br>
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Status</label>
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Tanggal Pembelian</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="datepicker" placeholder="Tanggal Pembelian">
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Harga Beli</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="" value="5.000.000">
+                  </div>
+                </div><br><br>
+                 <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Batas Pemakaian (Tahun)</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="" value="5">
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Masa Pemakaian (Tahun)</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="" value="1">
+                  </div>
+                </div><br><br>
+                 <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Penyusutan</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="" value="4.000.000">
+                  </div>
+                </div><br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Status</label>
                   
-                  <div class="col-sm-10">
+                  <div class="col-sm-9">
                     <select id="edit6" class="form-control">
                       <option>Tersedia</option>
                       <option>Rusak</option>
@@ -205,9 +273,9 @@
                 </div><br><br>
                 
                 <div class="form-group">
-                  <label for="edit7" class="col-sm-2 control-label" >Lokasi</label>
+                  <label for="edit7" class="col-sm-3 control-label" >Lokasi</label>
 
-                  <div class="col-sm-10">
+                  <div class="col-sm-9">
                     <select id="edit7" class="form-control">
                     </select>
                   </div>
@@ -215,29 +283,29 @@
 
                 <hr>
                 <div class="form-group dijual">
-                  <label for="edit8" class="col-sm-2 control-label" >Gambar Aset</label>
+                  <label for="edit8" class="col-sm-3 control-label" >Gambar Aset</label>
 
-                  <div class="col-sm-10">
+                  <div class="col-sm-9">
                       <input id="edit8" type="file">
                   </div>
                 </div>
                 <div class="form-group dijual">
-                  <label for="inputEmail3" class="col-sm-2 control-label" >Harga</label>
+                  <label for="inputEmail3" class="col-sm-3 control-label" >Harga</label>
 
-                  <div class="col-sm-10">
+                  <div class="col-sm-9">
                     <input type="text" class="form-control" id="edit9" value="">
                   </div>
                 </div>
                 <div class="form-group dijual">
-                  <label for="edit8" class="col-sm-2 control-label">Spesifikasi</label>
-                  <div class="col-sm-10">
+                  <label for="edit8" class="col-sm-3 control-label">Spesifikasi</label>
+                  <div class="col-sm-9">
                     <textarea class="form-control" rows="3" id="edit10"></textarea>
                   </div> 
                 </div>
                 
                 <div class="form-group dijual">
-                    <label for="edit8" class="col-sm-2 control-label">Kualitas</label>
-                    <div class="col-sm-10">
+                    <label for="edit8" class="col-sm-3 control-label">Kualitas</label>
+                    <div class="col-sm-9">
                       <select class="form-control">
                         <option>1</option>
                         <option>2</option>
@@ -310,7 +378,7 @@
 <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-
+<script src="../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <!-- FastClick -->
 <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
@@ -326,6 +394,10 @@
   }
 </style>
 <script>
+  //date
+  $('#datepicker').datepicker({
+      autoclose: true
+    })
 //table
   function loadTable(data) {
     $("#tabelAset tbody").html("")
@@ -335,6 +407,7 @@
           <td>${item.kodeAset}</td>
           <td>${item.nama}</td>
           <td>${item.lokasi}</td>
+          <td>1</td>
           <td>${item.status}</td>
           <td><a href="#" data-toggle="modal" data-target="#modal-detail" class="openDetail" data-item=${item.kodeAset}>Detail</a></td>
           <td><a href="#" data-toggle="modal" data-target="#modal-edit" class="openEdit" data-item=${item.kodeAset}>Edit</a></td>
